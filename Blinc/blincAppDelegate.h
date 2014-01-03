@@ -11,5 +11,5 @@
 @interface blincAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+-(void)checkToken;
 @end

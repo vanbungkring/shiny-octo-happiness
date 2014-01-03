@@ -19,6 +19,8 @@
 		D0699EF11876E6BD0029F6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED91876E6BD0029F6FD /* UIKit.framework */; };
 		D0699EF91876E6BD0029F6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0699EF71876E6BD0029F6FD /* InfoPlist.strings */; };
 		D0699EFB1876E6BD0029F6FD /* BlincTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EFA1876E6BD0029F6FD /* BlincTests.m */; };
+		D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */; };
+		D0699F121876EB3E0029F6FD /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699F111876EB3E0029F6FD /* blincLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		D0699EF61876E6BD0029F6FD /* BlincTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlincTests-Info.plist"; sourceTree = "<group>"; };
 		D0699EF81876E6BD0029F6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0699EFA1876E6BD0029F6FD /* BlincTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlincTests.m; sourceTree = "<group>"; };
+		D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blinc-bg@2x.png"; sourceTree = "<group>"; };
+		D0699F101876EB3E0029F6FD /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
+		D0699F111876EB3E0029F6FD /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,8 @@
 		D0699F041876E6E90029F6FD /* app */ = {
 			isa = PBXGroup;
 			children = (
+				D0699F0C1876EA360029F6FD /* assets */,
+				D0699F081876E7F40029F6FD /* library */,
 				D0699F051876E6E90029F6FD /* controller */,
 				D0699F061876E6E90029F6FD /* model */,
 				D0699F071876E6E90029F6FD /* view */,
@@ -172,8 +179,57 @@
 		D0699F071876E6E90029F6FD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0699F091876E8060029F6FD /* landing */,
+				D0699F0A1876E8060029F6FD /* login */,
+				D0699F0B1876E8060029F6FD /* register */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		D0699F081876E7F40029F6FD /* library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		D0699F091876E8060029F6FD /* landing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = landing;
+			sourceTree = "<group>";
+		};
+		D0699F0A1876E8060029F6FD /* login */ = {
+			isa = PBXGroup;
+			children = (
+				D0699F101876EB3E0029F6FD /* blincLoginViewController.h */,
+				D0699F111876EB3E0029F6FD /* blincLoginViewController.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		D0699F0B1876E8060029F6FD /* register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		D0699F0C1876EA360029F6FD /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D0699F0D1876EA360029F6FD /* common-assets */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		D0699F0D1876EA360029F6FD /* common-assets */ = {
+			isa = PBXGroup;
+			children = (
+				D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */,
+			);
+			path = "common-assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+				D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */,
 				D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0699F121876EB3E0029F6FD /* blincLoginViewController.m in Sources */,
 				D0699EE21876E6BD0029F6FD /* main.m in Sources */,
 				D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */,
 			);
