@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0699ED61876E6BD0029F6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED51876E6BD0029F6FD /* Foundation.framework */; };
+		D0699ED81876E6BD0029F6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */; };
+		D0699EDA1876E6BD0029F6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED91876E6BD0029F6FD /* UIKit.framework */; };
+		D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0699EDE1876E6BD0029F6FD /* InfoPlist.strings */; };
+		D0699EE21876E6BD0029F6FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EE11876E6BD0029F6FD /* main.m */; };
+		D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EE51876E6BD0029F6FD /* blincAppDelegate.m */; };
+		D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0699EE71876E6BD0029F6FD /* Images.xcassets */; };
+		D0699EEF1876E6BD0029F6FD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699EEE1876E6BD0029F6FD /* XCTest.framework */; };
+		D0699EF01876E6BD0029F6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED51876E6BD0029F6FD /* Foundation.framework */; };
+		D0699EF11876E6BD0029F6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED91876E6BD0029F6FD /* UIKit.framework */; };
+		D0699EF91876E6BD0029F6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0699EF71876E6BD0029F6FD /* InfoPlist.strings */; };
+		D0699EFB1876E6BD0029F6FD /* BlincTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EFA1876E6BD0029F6FD /* BlincTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0699EF21876E6BD0029F6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0699ECA1876E6BD0029F6FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0699ED11876E6BD0029F6FD;
+			remoteInfo = Blinc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0699ED21876E6BD0029F6FD /* Blinc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blinc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0699ED51876E6BD0029F6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0699ED91876E6BD0029F6FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0699EDD1876E6BD0029F6FD /* Blinc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blinc-Info.plist"; sourceTree = "<group>"; };
+		D0699EDF1876E6BD0029F6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0699EE11876E6BD0029F6FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0699EE31876E6BD0029F6FD /* Blinc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blinc-Prefix.pch"; sourceTree = "<group>"; };
+		D0699EE41876E6BD0029F6FD /* blincAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blincAppDelegate.h; sourceTree = "<group>"; };
+		D0699EE51876E6BD0029F6FD /* blincAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blincAppDelegate.m; sourceTree = "<group>"; };
+		D0699EE71876E6BD0029F6FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0699EED1876E6BD0029F6FD /* BlincTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlincTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0699EEE1876E6BD0029F6FD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0699EF61876E6BD0029F6FD /* BlincTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlincTests-Info.plist"; sourceTree = "<group>"; };
+		D0699EF81876E6BD0029F6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0699EFA1876E6BD0029F6FD /* BlincTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlincTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0699ECF1876E6BD0029F6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699ED81876E6BD0029F6FD /* CoreGraphics.framework in Frameworks */,
+				D0699EDA1876E6BD0029F6FD /* UIKit.framework in Frameworks */,
+				D0699ED61876E6BD0029F6FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0699EEA1876E6BD0029F6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699EEF1876E6BD0029F6FD /* XCTest.framework in Frameworks */,
+				D0699EF11876E6BD0029F6FD /* UIKit.framework in Frameworks */,
+				D0699EF01876E6BD0029F6FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0699EC91876E6BD0029F6FD = {
+			isa = PBXGroup;
+			children = (
+				D0699EDB1876E6BD0029F6FD /* Blinc */,
+				D0699EF41876E6BD0029F6FD /* BlincTests */,
+				D0699ED41876E6BD0029F6FD /* Frameworks */,
+				D0699ED31876E6BD0029F6FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0699ED31876E6BD0029F6FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0699ED21876E6BD0029F6FD /* Blinc.app */,
+				D0699EED1876E6BD0029F6FD /* BlincTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0699ED41876E6BD0029F6FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0699ED51876E6BD0029F6FD /* Foundation.framework */,
+				D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */,
+				D0699ED91876E6BD0029F6FD /* UIKit.framework */,
+				D0699EEE1876E6BD0029F6FD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0699EDB1876E6BD0029F6FD /* Blinc */ = {
+			isa = PBXGroup;
+			children = (
+				D0699EE41876E6BD0029F6FD /* blincAppDelegate.h */,
+				D0699EE51876E6BD0029F6FD /* blincAppDelegate.m */,
+				D0699EE71876E6BD0029F6FD /* Images.xcassets */,
+				D0699EDC1876E6BD0029F6FD /* Supporting Files */,
+			);
+			path = Blinc;
+			sourceTree = "<group>";
+		};
+		D0699EDC1876E6BD0029F6FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0699EDD1876E6BD0029F6FD /* Blinc-Info.plist */,
+				D0699EDE1876E6BD0029F6FD /* InfoPlist.strings */,
+				D0699EE11876E6BD0029F6FD /* main.m */,
+				D0699EE31876E6BD0029F6FD /* Blinc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0699EF41876E6BD0029F6FD /* BlincTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0699EFA1876E6BD0029F6FD /* BlincTests.m */,
+				D0699EF51876E6BD0029F6FD /* Supporting Files */,
+			);
+			path = BlincTests;
+			sourceTree = "<group>";
+		};
+		D0699EF51876E6BD0029F6FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0699EF61876E6BD0029F6FD /* BlincTests-Info.plist */,
+				D0699EF71876E6BD0029F6FD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0699ED11876E6BD0029F6FD /* Blinc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0699EFE1876E6BD0029F6FD /* Build configuration list for PBXNativeTarget "Blinc" */;
+			buildPhases = (
+				D0699ECE1876E6BD0029F6FD /* Sources */,
+				D0699ECF1876E6BD0029F6FD /* Frameworks */,
+				D0699ED01876E6BD0029F6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blinc;
+			productName = Blinc;
+			productReference = D0699ED21876E6BD0029F6FD /* Blinc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0699EEC1876E6BD0029F6FD /* BlincTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0699F011876E6BD0029F6FD /* Build configuration list for PBXNativeTarget "BlincTests" */;
+			buildPhases = (
+				D0699EE91876E6BD0029F6FD /* Sources */,
+				D0699EEA1876E6BD0029F6FD /* Frameworks */,
+				D0699EEB1876E6BD0029F6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0699EF31876E6BD0029F6FD /* PBXTargetDependency */,
+			);
+			name = BlincTests;
+			productName = BlincTests;
+			productReference = D0699EED1876E6BD0029F6FD /* BlincTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0699ECA1876E6BD0029F6FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = blinc;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = netra;
+				TargetAttributes = {
+					D0699EEC1876E6BD0029F6FD = {
+						TestTargetID = D0699ED11876E6BD0029F6FD;
+					};
+				};
+			};
+			buildConfigurationList = D0699ECD1876E6BD0029F6FD /* Build configuration list for PBXProject "Blinc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0699EC91876E6BD0029F6FD;
+			productRefGroup = D0699ED31876E6BD0029F6FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0699ED11876E6BD0029F6FD /* Blinc */,
+				D0699EEC1876E6BD0029F6FD /* BlincTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0699ED01876E6BD0029F6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+				D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0699EEB1876E6BD0029F6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699EF91876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0699ECE1876E6BD0029F6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699EE21876E6BD0029F6FD /* main.m in Sources */,
+				D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0699EE91876E6BD0029F6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0699EFB1876E6BD0029F6FD /* BlincTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0699EF31876E6BD0029F6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0699ED11876E6BD0029F6FD /* Blinc */;
+			targetProxy = D0699EF21876E6BD0029F6FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0699EDE1876E6BD0029F6FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0699EDF1876E6BD0029F6FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0699EF71876E6BD0029F6FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0699EF81876E6BD0029F6FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0699EFC1876E6BD0029F6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0699EFD1876E6BD0029F6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0699EFF1876E6BD0029F6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blinc/Blinc-Prefix.pch";
+				INFOPLIST_FILE = "Blinc/Blinc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0699F001876E6BD0029F6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blinc/Blinc-Prefix.pch";
+				INFOPLIST_FILE = "Blinc/Blinc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0699F021876E6BD0029F6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blinc.app/Blinc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blinc/Blinc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BlincTests/BlincTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0699F031876E6BD0029F6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blinc.app/Blinc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blinc/Blinc-Prefix.pch";
+				INFOPLIST_FILE = "BlincTests/BlincTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0699ECD1876E6BD0029F6FD /* Build configuration list for PBXProject "Blinc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0699EFC1876E6BD0029F6FD /* Debug */,
+				D0699EFD1876E6BD0029F6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0699EFE1876E6BD0029F6FD /* Build configuration list for PBXNativeTarget "Blinc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0699EFF1876E6BD0029F6FD /* Debug */,
+				D0699F001876E6BD0029F6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0699F011876E6BD0029F6FD /* Build configuration list for PBXNativeTarget "BlincTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0699F021876E6BD0029F6FD /* Debug */,
+				D0699F031876E6BD0029F6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0699ECA1876E6BD0029F6FD /* Project object */;
+}
