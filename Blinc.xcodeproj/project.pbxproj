@@ -107,6 +107,7 @@
 		D0699EDB1876E6BD0029F6FD /* Blinc */ = {
 			isa = PBXGroup;
 			children = (
+				D0699F041876E6E90029F6FD /* app */,
 				D0699EE41876E6BD0029F6FD /* blincAppDelegate.h */,
 				D0699EE51876E6BD0029F6FD /* blincAppDelegate.m */,
 				D0699EE71876E6BD0029F6FD /* Images.xcassets */,
@@ -142,6 +143,37 @@
 				D0699EF71876E6BD0029F6FD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0699F041876E6E90029F6FD /* app */ = {
+			isa = PBXGroup;
+			children = (
+				D0699F051876E6E90029F6FD /* controller */,
+				D0699F061876E6E90029F6FD /* model */,
+				D0699F071876E6E90029F6FD /* view */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		D0699F051876E6E90029F6FD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D0699F061876E6E90029F6FD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D0699F071876E6E90029F6FD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
