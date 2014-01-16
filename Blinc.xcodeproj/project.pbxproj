@@ -20,6 +20,16 @@
 		D0699EF91876E6BD0029F6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0699EF71876E6BD0029F6FD /* InfoPlist.strings */; };
 		D0699EFB1876E6BD0029F6FD /* BlincTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EFA1876E6BD0029F6FD /* BlincTests.m */; };
 		D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */; };
+		D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */; };
+		D0BECB941886C67A00D4A00F /* ICETutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BECB911886C67A00D4A00F /* ICETutorialController.m */; };
+		D0BECB951886C67A00D4A00F /* ICETutorialPage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BECB931886C67A00D4A00F /* ICETutorialPage.m */; };
+		D0BECB991886C7B100D4A00F /* ICETutorialController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BECB971886C7B100D4A00F /* ICETutorialController_iPhone.xib */; };
+		D0BECB9A1886C7B100D4A00F /* ICETutorialController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BECB981886C7B100D4A00F /* ICETutorialController_iPhone4.xib */; };
+		D0BECBD21886CDF900D4A00F /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECBCD1886CDF900D4A00F /* 1@2x.png */; };
+		D0BECBD31886CDF900D4A00F /* 1-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECBCF1886CDF900D4A00F /* 1-568h@2x.png */; };
+		D0BECBD41886CDF900D4A00F /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECBD01886CDF900D4A00F /* login@2x.png */; };
+		D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECBD11886CDF900D4A00F /* register@2x.png */; };
+		D0C0E8111888035E0025AE95 /* blincRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -65,6 +75,19 @@
 		D0699EF81876E6BD0029F6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0699EFA1876E6BD0029F6FD /* BlincTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlincTests.m; sourceTree = "<group>"; };
 		D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blinc-bg@2x.png"; sourceTree = "<group>"; };
+		D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
+		D0BECB901886C67A00D4A00F /* ICETutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialController.h; sourceTree = "<group>"; };
+		D0BECB911886C67A00D4A00F /* ICETutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialController.m; sourceTree = "<group>"; };
+		D0BECB921886C67A00D4A00F /* ICETutorialPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialPage.h; sourceTree = "<group>"; };
+		D0BECB931886C67A00D4A00F /* ICETutorialPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialPage.m; sourceTree = "<group>"; };
+		D0BECB971886C7B100D4A00F /* ICETutorialController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPhone.xib; sourceTree = "<group>"; };
+		D0BECB981886C7B100D4A00F /* ICETutorialController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPhone4.xib; sourceTree = "<group>"; };
+		D0BECBCD1886CDF900D4A00F /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		D0BECBCF1886CDF900D4A00F /* 1-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-568h@2x.png"; sourceTree = "<group>"; };
+		D0BECBD01886CDF900D4A00F /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		D0BECBD11886CDF900D4A00F /* register@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register@2x.png"; sourceTree = "<group>"; };
+		D0C0E80F1888035E0025AE95 /* blincRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincRegisterViewController.h; sourceTree = "<group>"; };
+		D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincRegisterViewController.m; sourceTree = "<group>"; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -238,6 +261,7 @@
 		D0699F081876E7F40029F6FD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D0BECB8F1886C67A00D4A00F /* Libraries */,
 				D0EE9F4D188576CE001FF050 /* AFNetworking */,
 				D0EE9F2A18857605001FF050 /* ZBarSDK */,
 			);
@@ -255,14 +279,72 @@
 		D0699F0D1876EA360029F6FD /* common-assets */ = {
 			isa = PBXGroup;
 			children = (
+				D0BECBCB1886CDF900D4A00F /* welcomeImage */,
+				D0BECB8C1886BE4A00D4A00F /* common */,
 				D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */,
 			);
 			path = "common-assets";
 			sourceTree = "<group>";
 		};
+		D0BECB8C1886BE4A00D4A00F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D0BECB8F1886C67A00D4A00F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECB901886C67A00D4A00F /* ICETutorialController.h */,
+				D0BECB911886C67A00D4A00F /* ICETutorialController.m */,
+				D0BECB921886C67A00D4A00F /* ICETutorialPage.h */,
+				D0BECB931886C67A00D4A00F /* ICETutorialPage.m */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		D0BECB961886C7B100D4A00F /* additional_view */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECB971886C7B100D4A00F /* ICETutorialController_iPhone.xib */,
+				D0BECB981886C7B100D4A00F /* ICETutorialController_iPhone4.xib */,
+			);
+			path = additional_view;
+			sourceTree = "<group>";
+		};
+		D0BECBCB1886CDF900D4A00F /* welcomeImage */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECBCC1886CDF900D4A00F /* i4 */,
+				D0BECBCE1886CDF900D4A00F /* i5 */,
+				D0BECBD01886CDF900D4A00F /* login@2x.png */,
+				D0BECBD11886CDF900D4A00F /* register@2x.png */,
+			);
+			path = welcomeImage;
+			sourceTree = "<group>";
+		};
+		D0BECBCC1886CDF900D4A00F /* i4 */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECBCD1886CDF900D4A00F /* 1@2x.png */,
+			);
+			path = i4;
+			sourceTree = "<group>";
+		};
+		D0BECBCE1886CDF900D4A00F /* i5 */ = {
+			isa = PBXGroup;
+			children = (
+				D0BECBCF1886CDF900D4A00F /* 1-568h@2x.png */,
+			);
+			path = i5;
+			sourceTree = "<group>";
+		};
 		D0EE9F2218856F13001FF050 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0BECB961886C7B100D4A00F /* additional_view */,
 				D0EE9F2318856F13001FF050 /* landing */,
 				D0EE9F2418856F13001FF050 /* login */,
 				D0EE9F2718856F13001FF050 /* register */,
@@ -290,6 +372,8 @@
 		D0EE9F2718856F13001FF050 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				D0C0E80F1888035E0025AE95 /* blincRegisterViewController.h */,
+				D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -467,13 +551,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0BECBD21886CDF900D4A00F /* 1@2x.png in Resources */,
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
 				D0EE9F4A18857605001FF050 /* zbar-help.html in Resources */,
+				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,
+				D0BECBD41886CDF900D4A00F /* login@2x.png in Resources */,
+				D0BECBD31886CDF900D4A00F /* 1-568h@2x.png in Resources */,
 				D0EE9F4C18857605001FF050 /* zbar-samples.png in Resources */,
+				D0BECB991886C7B100D4A00F /* ICETutorialController_iPhone.xib in Resources */,
 				D0EE9F4B18857605001FF050 /* zbar-helpicons.png in Resources */,
+				D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */,
 				D0EE9F4918857605001FF050 /* zbar-back.png in Resources */,
 				D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */,
 				D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */,
+				D0BECB9A1886C7B100D4A00F /* ICETutorialController_iPhone4.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,11 +587,14 @@
 				D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */,
 				D0EE9F62188576CE001FF050 /* AFHTTPRequestOperationManager.m in Sources */,
 				D0EE9F64188576CE001FF050 /* AFNetworkReachabilityManager.m in Sources */,
+				D0BECB941886C67A00D4A00F /* ICETutorialController.m in Sources */,
 				D0EE9F68188576CE001FF050 /* AFURLResponseSerialization.m in Sources */,
+				D0C0E8111888035E0025AE95 /* blincRegisterViewController.m in Sources */,
 				D0EE9F66188576CE001FF050 /* AFURLConnectionOperation.m in Sources */,
 				D0EE9F65188576CE001FF050 /* AFSecurityPolicy.m in Sources */,
 				D0EE9F63188576CE001FF050 /* AFHTTPSessionManager.m in Sources */,
 				D0EE9F67188576CE001FF050 /* AFURLRequestSerialization.m in Sources */,
+				D0BECB951886C67A00D4A00F /* ICETutorialPage.m in Sources */,
 				D0EE9F69188576CE001FF050 /* AFURLSessionManager.m in Sources */,
 				D0699EE21876E6BD0029F6FD /* main.m in Sources */,
 				D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */,

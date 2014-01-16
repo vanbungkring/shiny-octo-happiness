@@ -7,20 +7,152 @@
 //
 
 #import "blincAppDelegate.h"
-
+#import "blincLoginViewController.h"
 @implementation blincAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blinc-bg"]];
-    [self.window makeKeyAndVisible];
+	[self checkToken];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200.f, 0) forBarMetrics:UIBarMetricsDefault];
+	NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor clearColor];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:18], NSFontAttributeName, nil]];
+	[self.window makeKeyAndVisible];
     return YES;
 }
 - (void)checkToken{
-
-	[self.window.rootViewController presentViewController:[[NSClassFromString(@"blincLoginViewController") alloc]init] animated:YES completion:Nil];
+	
+	[self showIntro];
+	
+	
+}
+-(void)showIntro{
+	// Init the pages texts, and pictures.
+	NSArray *tutorialLayers = nil;
+	if ([[UIScreen mainScreen] bounds].size.height == 568) {
+		ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"1-568h"];
+		ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Location-568h"];
+		ICETutorialPage *layer3 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Map-568h"];
+		ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"PromoDetails-568h"];
+		ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"PromoListt-568h"];
+		ICETutorialPage *layer6 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Radius-568h"];
+		ICETutorialPage *layer7 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Category-568h"];
+		ICETutorialPage *layer8 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"SlideCode-568h"];
+		tutorialLayers  = @[layer1,layer2,layer3,layer4,layer5,layer6,layer7,layer8];
+		
+		//this is iphone 5 xib
+    } else {
+		ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"1"];
+		ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Locationsss"];
+		ICETutorialPage *layer3 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Map"];
+		ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"PromoDetails"];
+		ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"PromoListt"];
+		ICETutorialPage *layer6 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Radius"];
+		ICETutorialPage *layer7 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"Category"];
+		ICETutorialPage *layer8 = [[ICETutorialPage alloc] initWithSubTitle:@""
+																description:@""
+																pictureName:@"SlideCode"];
+		tutorialLayers  = @[layer1,layer2,layer3,layer4,layer5,layer6,layer7,layer8];
+		
+    }
+    
+    // Set the common style for SubTitles and Description (can be overrided on each page).
+    ICETutorialLabelStyle *subStyle = [[ICETutorialLabelStyle alloc] init];
+    [subStyle setFont:TUTORIAL_SUB_TITLE_FONT];
+    [subStyle setTextColor:TUTORIAL_LABEL_TEXT_COLOR];
+    [subStyle setLinesNumber:TUTORIAL_SUB_TITLE_LINES_NUMBER];
+    [subStyle setOffset:TUTORIAL_SUB_TITLE_OFFSET];
+	
+    
+    ICETutorialLabelStyle *descStyle = [[ICETutorialLabelStyle alloc] init];
+    [descStyle setFont:TUTORIAL_DESC_FONT];
+    [descStyle setTextColor:TUTORIAL_LABEL_TEXT_COLOR];
+    [descStyle setLinesNumber:TUTORIAL_DESC_LINES_NUMBER];
+    [descStyle setOffset:TUTORIAL_DESC_OFFSET];
+    
+    // Load into an array.
+    
+    // Override point for customization after application launch.
+	if ([[UIScreen mainScreen] bounds].size.height == 568) {
+		self.viewController = [[ICETutorialController alloc] initWithNibName:@"ICETutorialController_iPhone4"
+                                                                      bundle:nil
+                                                                    andPages:tutorialLayers];
+		
+    } else {
+		self.viewController = [[ICETutorialController alloc] initWithNibName:@"ICETutorialController_iPhone"
+                                                                      bundle:nil
+                                                                    andPages:tutorialLayers];
+    }
+    
+    // Set the common styles, and start scrolling (auto scroll, and looping enabled by default)
+    [self.viewController setCommonPageSubTitleStyle:subStyle];
+    [self.viewController setCommonPageDescriptionStyle:descStyle];
+	
+	
+	__unsafe_unretained typeof(self) weakSelf = self;
+    // Set button 1 action.
+    [self.viewController setButton1Block:^(UIButton *button){
+        [weakSelf call:@"blincLoginViewController"];
+    }];
+    
+    // Set button 2 action, stop the scrolling.
+	
+    [self.viewController setButton2Block:^(UIButton *button){
+        
+        [weakSelf call:@"blincRegisterViewController"];
+    }];
+    
+    // Run it.
+    [self.viewController startScrolling];
+	
+	self.window.rootViewController=self.viewController;
+	
+}
+-(void)call:(NSString*)status{
+	
+	UINavigationController *navO= [[UINavigationController alloc]initWithRootViewController:[[NSClassFromString(status) alloc]init]];
+	navO.modalTransitionStyle = UIModalPresentationFormSheet;
+	[navO.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	
+	[self.window.rootViewController presentViewController:navO animated:YES completion:nil];
+	
 	
 }
 - (void)applicationWillResignActive:(UIApplication *)application

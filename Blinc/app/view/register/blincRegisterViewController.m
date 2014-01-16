@@ -1,18 +1,18 @@
 //
-//  blincLoginViewController.m
+//  blincRegisterViewController.m
 //  Blinc
 //
-//  Created by Flash on 1/3/14.
+//  Created by Flash on 1/16/14.
 //  Copyright (c) 2014 netra. All rights reserved.
 //
 
-#import "blincLoginViewController.h"
+#import "blincRegisterViewController.h"
 
-@interface blincLoginViewController ()
+@interface blincRegisterViewController ()
 
 @end
 
-@implementation blincLoginViewController
+@implementation blincRegisterViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,7 +20,7 @@
     if (self) {
         // Custom initialization
 		self.view.backgroundColor = [UIColor whiteColor];
-		self.title = @"Login";
+		self.title = @"Register";
     }
     return self;
 }
