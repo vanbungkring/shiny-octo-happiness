@@ -33,26 +33,29 @@
 		username = [[UITextField alloc]initWithFrame:CGRectMake(72, 220, 176, 36)];
 		username.backgroundColor = [UIColor whiteColor];
 		username.placeholder = @"Username";
-		username.layer.borderWidth = 0.8;
+		username.layer.borderWidth = 1;
 		username.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
-		username.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
+		username.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
 		username.layer.cornerRadius =5;
+		username.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
 		
 		password = [[UITextField alloc]initWithFrame:CGRectMake(72, 270, 176, 36)];
 		password.backgroundColor = [UIColor whiteColor];
 		password.placeholder = @"password";
-		password.layer.borderWidth = 0.8;
+		password.layer.borderWidth = 1;
 		password.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
-		password.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
+		password.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
 		password.layer.cornerRadius =5;
+		password.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
 
 		password_again = [[UITextField alloc]initWithFrame:CGRectMake(72, 320, 176, 36)];
 		password_again.backgroundColor = [UIColor whiteColor];
 		password_again.placeholder = @"password again";
-		password_again.layer.borderWidth = 0.8;
+		password_again.layer.borderWidth = 1;
 		password_again.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
-		password_again.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
+		password_again.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
 		password_again.layer.cornerRadius =5;
+		password_again.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
 		
 		register_button = [[UIButton alloc]initWithFrame:CGRectMake(72, 380, 176, 44.5)];
 		register_button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"register-button"]];

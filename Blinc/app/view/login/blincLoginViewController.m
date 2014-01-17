@@ -38,6 +38,7 @@
 		userName.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
 		userName.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
 		userName.layer.cornerRadius =5;
+		userName.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
 		
 		password = [[UITextField alloc]initWithFrame:CGRectMake(72, 270, 176, 36)];
 		password.backgroundColor = [UIColor whiteColor];
@@ -46,7 +47,8 @@
 		password.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
 		password.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
 		password.layer.cornerRadius =5;
-
+		password.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
+		
 		login_button = [[UIButton alloc]initWithFrame:CGRectMake(72, 380, 176, 44.5)];
 		login_button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login-button"]];
 		

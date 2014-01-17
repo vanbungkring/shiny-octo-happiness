@@ -28,9 +28,13 @@
     return YES;
 }
 - (void)checkToken{
-	
-	[self showIntro];
-	
+	int x=1;
+	if(x==1){
+		[self showIntro];
+	}
+	else{
+		
+	}
 	
 }
 -(void)showIntro{
