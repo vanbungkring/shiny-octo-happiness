@@ -28,17 +28,44 @@
     return YES;
 }
 - (void)checkToken{
-	int x=1;
+	int x=0;
 	if(x==1){
 		[self showIntro];
 	}
 	else{
+		[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
 		[self loadpage];
 	}
 	
 }
 -(void)loadpage{
-
+	// If the device is an iPad, we make it taller.
+    tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 48];
+    
+    // Comment out the line above and uncomment the line below to show the tab bar at the top of the UI.
+    /*
+	 _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50 position:AKTabBarPositionBottom];
+     */
+    
+    [tabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    
+    UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
+	UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"qrcodeViewController") alloc]init]];
+	UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"myPlaceViewController") alloc]init]];
+	
+    
+    [tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+										  navigationController1,
+										  navigationController2,
+										  navigationController3,nil]];
+	
+    // If needed, disable the resizing when switching display orientations.
+    /*
+	 [_tabBarController setTabBarHasFixedHeight:YES];
+     */
+	[self.window setRootViewController:tabBarController];
+	
 }
 -(void)showIntro{
 	// Init the pages texts, and pictures.

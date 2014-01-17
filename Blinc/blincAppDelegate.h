@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AKTabBarController.h"
 @interface blincAppDelegate : UIResponder <UIApplicationDelegate>
 {
 	UINavigationController *nav;
+	AKTabBarController *tabBarController;
 	
 }
 @property (strong, nonatomic) UIWindow *window;
