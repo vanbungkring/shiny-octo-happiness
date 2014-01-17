@@ -15,5 +15,6 @@
 	UITextField *userName;
 	UITextField *password;
 	UIButton *login_button;
+	UILabel *terms;
 }
 @end

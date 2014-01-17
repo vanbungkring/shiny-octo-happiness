@@ -25,7 +25,7 @@
 		self.view.backgroundColor = [UIColor colorWithRed:0.941 green:0.941 blue:0.941 alpha:1];
 		
 		scrollview  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
-		scrollview.contentSize = CGSizeMake(320, 500);
+		scrollview.contentSize = CGSizeMake(320, 550);
 		
 		wrapper = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 504)];
 		wrapper.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"register-login-form"]];
@@ -47,10 +47,18 @@
 		password.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
 		password.layer.cornerRadius =5;
 
-		login_button = [[UIButton alloc]initWithFrame:CGRectMake(72, 330, 176, 44.5)];
+		login_button = [[UIButton alloc]initWithFrame:CGRectMake(72, 380, 176, 44.5)];
 		login_button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login-button"]];
 		
+		terms = [[UILabel alloc]initWithFrame:CGRectMake(20, 430, 280, 55)];
+		terms.text = @"By signing in, I accept BLINC*’s Terms of Service and Privacy Policy";
+		terms.numberOfLines = 2;
+		terms.textAlignment = NSTextAlignmentCenter;
+		terms.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+		terms.textColor = [UIColor colorWithRed:0.769 green:0.769 blue:0.769 alpha:1];
+		
 		[wrapper addSubview:login_button];
+		[wrapper addSubview:terms];
 		[wrapper addSubview:userName];
 		[wrapper addSubview:password];
 		[scrollview addSubview:wrapper];

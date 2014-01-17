@@ -34,6 +34,11 @@
 		D0C0E8111888035E0025AE95 /* blincRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */; };
 		D0C0E81318880C810025AE95 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C0E81218880C810025AE95 /* close@2x.png */; };
 		D0C0F5931888CC6000A67017 /* login-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C0F5921888CC6000A67017 /* login-button@2x.png */; };
+		D0C0F5971888CE2D00A67017 /* blincGate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C0F5961888CE2D00A67017 /* blincGate.m */; };
+		D0C0F5991888CE4800A67017 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F5981888CE4800A67017 /* AVFoundation.framework */; };
+		D0C0F59B1888CE5100A67017 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F59A1888CE5100A67017 /* CoreMedia.framework */; };
+		D0C0F59D1888CE5B00A67017 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F59C1888CE5B00A67017 /* CoreVideo.framework */; };
+		D0C0F59F1888CE6B00A67017 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F59E1888CE6B00A67017 /* libiconv.dylib */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -96,6 +101,12 @@
 		D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincRegisterViewController.m; sourceTree = "<group>"; };
 		D0C0E81218880C810025AE95 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		D0C0F5921888CC6000A67017 /* login-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button@2x.png"; sourceTree = "<group>"; };
+		D0C0F5951888CE2D00A67017 /* blincGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincGate.h; sourceTree = "<group>"; };
+		D0C0F5961888CE2D00A67017 /* blincGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincGate.m; sourceTree = "<group>"; };
+		D0C0F5981888CE4800A67017 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0C0F59A1888CE5100A67017 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D0C0F59C1888CE5B00A67017 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D0C0F59E1888CE6B00A67017 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -149,6 +160,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C0F59F1888CE6B00A67017 /* libiconv.dylib in Frameworks */,
+				D0C0F59D1888CE5B00A67017 /* CoreVideo.framework in Frameworks */,
+				D0C0F59B1888CE5100A67017 /* CoreMedia.framework in Frameworks */,
+				D0C0F5991888CE4800A67017 /* AVFoundation.framework in Frameworks */,
 				D0699ED81876E6BD0029F6FD /* CoreGraphics.framework in Frameworks */,
 				D0699EDA1876E6BD0029F6FD /* UIKit.framework in Frameworks */,
 				D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */,
@@ -191,6 +206,10 @@
 		D0699ED41876E6BD0029F6FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0C0F59E1888CE6B00A67017 /* libiconv.dylib */,
+				D0C0F59C1888CE5B00A67017 /* CoreVideo.framework */,
+				D0C0F59A1888CE5100A67017 /* CoreMedia.framework */,
+				D0C0F5981888CE4800A67017 /* AVFoundation.framework */,
 				D0699ED51876E6BD0029F6FD /* Foundation.framework */,
 				D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */,
 				D0699ED91876E6BD0029F6FD /* UIKit.framework */,
@@ -255,6 +274,7 @@
 		D0699F051876E6E90029F6FD /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0C0F5941888CDF900A67017 /* user-handle */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -351,6 +371,15 @@
 				D0BECBCF1886CDF900D4A00F /* 1-568h@2x.png */,
 			);
 			path = i5;
+			sourceTree = "<group>";
+		};
+		D0C0F5941888CDF900A67017 /* user-handle */ = {
+			isa = PBXGroup;
+			children = (
+				D0C0F5951888CE2D00A67017 /* blincGate.h */,
+				D0C0F5961888CE2D00A67017 /* blincGate.m */,
+			);
+			path = "user-handle";
 			sourceTree = "<group>";
 		};
 		D0EE9F2218856F13001FF050 /* view */ = {
@@ -614,6 +643,7 @@
 				D0EE9F69188576CE001FF050 /* AFURLSessionManager.m in Sources */,
 				D0699EE21876E6BD0029F6FD /* main.m in Sources */,
 				D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */,
+				D0C0F5971888CE2D00A67017 /* blincGate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
