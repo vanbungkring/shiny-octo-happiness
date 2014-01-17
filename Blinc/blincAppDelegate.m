@@ -33,9 +33,12 @@
 		[self showIntro];
 	}
 	else{
-		
+		[self loadpage];
 	}
 	
+}
+-(void)loadpage{
+
 }
 -(void)showIntro{
 	// Init the pages texts, and pictures.

@@ -45,6 +45,14 @@
 		D0EB807E188915CC00120627 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB807D188915CB00120627 /* MobileCoreServices.framework */; };
 		D0EB8080188915D100120627 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB807F188915D100120627 /* Security.framework */; };
 		D0EB80821889162500120627 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB80811889162500120627 /* SystemConfiguration.framework */; };
+		D0EB809718891AB500120627 /* AKTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB808818891AB500120627 /* AKTab.m */; };
+		D0EB809818891AB500120627 /* AKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB808A18891AB500120627 /* AKTabBar.m */; };
+		D0EB809918891AB500120627 /* AKTabBarController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0EB808C18891AB500120627 /* AKTabBarController.bundle */; };
+		D0EB809A18891AB500120627 /* AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB808E18891AB500120627 /* AKTabBarController.m */; };
+		D0EB809B18891AB500120627 /* AKTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB809018891AB500120627 /* AKTabBarView.m */; };
+		D0EB809C18891AB500120627 /* UINavigationController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB809218891AB500120627 /* UINavigationController+AKTabBarController.m */; };
+		D0EB809D18891AB500120627 /* UISplitViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB809418891AB500120627 /* UISplitViewController+AKTabBarController.m */; };
+		D0EB809E18891AB500120627 /* UIViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB809618891AB500120627 /* UIViewController+AKTabBarController.m */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -121,6 +129,22 @@
 		D0EB807D188915CB00120627 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D0EB807F188915D100120627 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D0EB80811889162500120627 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0EB808718891AB500120627 /* AKTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTab.h; sourceTree = "<group>"; };
+		D0EB808818891AB500120627 /* AKTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTab.m; sourceTree = "<group>"; };
+		D0EB808918891AB500120627 /* AKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTabBar.h; sourceTree = "<group>"; };
+		D0EB808A18891AB500120627 /* AKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTabBar.m; sourceTree = "<group>"; };
+		D0EB808B18891AB500120627 /* AKTabBarController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AKTabBarController-Prefix.pch"; sourceTree = "<group>"; };
+		D0EB808C18891AB500120627 /* AKTabBarController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AKTabBarController.bundle; sourceTree = "<group>"; };
+		D0EB808D18891AB500120627 /* AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTabBarController.h; sourceTree = "<group>"; };
+		D0EB808E18891AB500120627 /* AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTabBarController.m; sourceTree = "<group>"; };
+		D0EB808F18891AB500120627 /* AKTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTabBarView.h; sourceTree = "<group>"; };
+		D0EB809018891AB500120627 /* AKTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTabBarView.m; sourceTree = "<group>"; };
+		D0EB809118891AB500120627 /* UINavigationController+AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+AKTabBarController.h"; sourceTree = "<group>"; };
+		D0EB809218891AB500120627 /* UINavigationController+AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+AKTabBarController.m"; sourceTree = "<group>"; };
+		D0EB809318891AB500120627 /* UISplitViewController+AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+AKTabBarController.h"; sourceTree = "<group>"; };
+		D0EB809418891AB500120627 /* UISplitViewController+AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+AKTabBarController.m"; sourceTree = "<group>"; };
+		D0EB809518891AB500120627 /* UIViewController+AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKTabBarController.h"; sourceTree = "<group>"; };
+		D0EB809618891AB500120627 /* UIViewController+AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKTabBarController.m"; sourceTree = "<group>"; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -312,6 +336,7 @@
 		D0699F081876E7F40029F6FD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB808618891AB500120627 /* AKTabBarController */,
 				D0C0F5A01888D79700A67017 /* helper */,
 				D0BECB8F1886C67A00D4A00F /* Libraries */,
 				D0EE9F4D188576CE001FF050 /* AFNetworking */,
@@ -424,23 +449,62 @@
 			path = "network-handle";
 			sourceTree = "<group>";
 		};
+		D0EB808318891A1300120627 /* merchant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = merchant;
+			sourceTree = "<group>";
+		};
+		D0EB808418891A1300120627 /* myplace */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = myplace;
+			sourceTree = "<group>";
+		};
+		D0EB808518891A1300120627 /* qrcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = qrcode;
+			sourceTree = "<group>";
+		};
+		D0EB808618891AB500120627 /* AKTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D0EB808718891AB500120627 /* AKTab.h */,
+				D0EB808818891AB500120627 /* AKTab.m */,
+				D0EB808918891AB500120627 /* AKTabBar.h */,
+				D0EB808A18891AB500120627 /* AKTabBar.m */,
+				D0EB808B18891AB500120627 /* AKTabBarController-Prefix.pch */,
+				D0EB808C18891AB500120627 /* AKTabBarController.bundle */,
+				D0EB808D18891AB500120627 /* AKTabBarController.h */,
+				D0EB808E18891AB500120627 /* AKTabBarController.m */,
+				D0EB808F18891AB500120627 /* AKTabBarView.h */,
+				D0EB809018891AB500120627 /* AKTabBarView.m */,
+				D0EB809118891AB500120627 /* UINavigationController+AKTabBarController.h */,
+				D0EB809218891AB500120627 /* UINavigationController+AKTabBarController.m */,
+				D0EB809318891AB500120627 /* UISplitViewController+AKTabBarController.h */,
+				D0EB809418891AB500120627 /* UISplitViewController+AKTabBarController.m */,
+				D0EB809518891AB500120627 /* UIViewController+AKTabBarController.h */,
+				D0EB809618891AB500120627 /* UIViewController+AKTabBarController.m */,
+			);
+			path = AKTabBarController;
+			sourceTree = "<group>";
+		};
 		D0EE9F2218856F13001FF050 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB808318891A1300120627 /* merchant */,
+				D0EB808418891A1300120627 /* myplace */,
+				D0EB808518891A1300120627 /* qrcode */,
 				D0BECB961886C7B100D4A00F /* additional_view */,
-				D0EE9F2318856F13001FF050 /* landing */,
 				D0EE9F2418856F13001FF050 /* login */,
 				D0EE9F2718856F13001FF050 /* register */,
 				D0EE9F2818856F13001FF050 /* tutorial */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		D0EE9F2318856F13001FF050 /* landing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = landing;
 			sourceTree = "<group>";
 		};
 		D0EE9F2418856F13001FF050 /* login */ = {
@@ -659,6 +723,7 @@
 				D0EE9F4B18857605001FF050 /* zbar-helpicons.png in Resources */,
 				D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */,
 				D0EE9F4918857605001FF050 /* zbar-back.png in Resources */,
+				D0EB809918891AB500120627 /* AKTabBarController.bundle in Resources */,
 				D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */,
 				D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */,
 				D0BECB9A1886C7B100D4A00F /* ICETutorialController_iPhone4.xib in Resources */,
@@ -680,7 +745,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EB809B18891AB500120627 /* AKTabBarView.m in Sources */,
+				D0EB809A18891AB500120627 /* AKTabBarController.m in Sources */,
+				D0EB809718891AB500120627 /* AKTab.m in Sources */,
 				D0EB807C188913EE00120627 /* orc.m in Sources */,
+				D0EB809C18891AB500120627 /* UINavigationController+AKTabBarController.m in Sources */,
 				D0EE9F61188576CE001FF050 /* AFHTTPRequestOperation.m in Sources */,
 				D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */,
 				D0EE9F62188576CE001FF050 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -688,6 +757,7 @@
 				D0BECB941886C67A00D4A00F /* ICETutorialController.m in Sources */,
 				D0EB80791889137D00120627 /* netraNetwork.m in Sources */,
 				D0EE9F68188576CE001FF050 /* AFURLResponseSerialization.m in Sources */,
+				D0EB809818891AB500120627 /* AKTabBar.m in Sources */,
 				D0C0E8111888035E0025AE95 /* blincRegisterViewController.m in Sources */,
 				D0EE9F66188576CE001FF050 /* AFURLConnectionOperation.m in Sources */,
 				D0EE9F65188576CE001FF050 /* AFSecurityPolicy.m in Sources */,
@@ -696,7 +766,9 @@
 				D0BECB951886C67A00D4A00F /* ICETutorialPage.m in Sources */,
 				D0EE9F69188576CE001FF050 /* AFURLSessionManager.m in Sources */,
 				D0699EE21876E6BD0029F6FD /* main.m in Sources */,
+				D0EB809D18891AB500120627 /* UISplitViewController+AKTabBarController.m in Sources */,
 				D0699EE61876E6BD0029F6FD /* blincAppDelegate.m in Sources */,
+				D0EB809E18891AB500120627 /* UIViewController+AKTabBarController.m in Sources */,
 				D0C0F5971888CE2D00A67017 /* blincGate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
