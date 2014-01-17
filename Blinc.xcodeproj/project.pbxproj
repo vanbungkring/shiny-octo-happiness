@@ -20,6 +20,8 @@
 		D0699EF91876E6BD0029F6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0699EF71876E6BD0029F6FD /* InfoPlist.strings */; };
 		D0699EFB1876E6BD0029F6FD /* BlincTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0699EFA1876E6BD0029F6FD /* BlincTests.m */; };
 		D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */; };
+		D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */; };
+		D0B9CFAD1888C2CE00FC636D /* register-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */; };
 		D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */; };
 		D0BECB941886C67A00D4A00F /* ICETutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BECB911886C67A00D4A00F /* ICETutorialController.m */; };
 		D0BECB951886C67A00D4A00F /* ICETutorialPage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BECB931886C67A00D4A00F /* ICETutorialPage.m */; };
@@ -31,6 +33,7 @@
 		D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECBD11886CDF900D4A00F /* register@2x.png */; };
 		D0C0E8111888035E0025AE95 /* blincRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */; };
 		D0C0E81318880C810025AE95 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C0E81218880C810025AE95 /* close@2x.png */; };
+		D0C0F5931888CC6000A67017 /* login-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C0F5921888CC6000A67017 /* login-button@2x.png */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -76,6 +79,8 @@
 		D0699EF81876E6BD0029F6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0699EFA1876E6BD0029F6FD /* BlincTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlincTests.m; sourceTree = "<group>"; };
 		D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blinc-bg@2x.png"; sourceTree = "<group>"; };
+		D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-login-form@2x.png"; sourceTree = "<group>"; };
+		D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-button@2x.png"; sourceTree = "<group>"; };
 		D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D0BECB901886C67A00D4A00F /* ICETutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialController.h; sourceTree = "<group>"; };
 		D0BECB911886C67A00D4A00F /* ICETutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialController.m; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		D0C0E80F1888035E0025AE95 /* blincRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincRegisterViewController.h; sourceTree = "<group>"; };
 		D0C0E8101888035E0025AE95 /* blincRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincRegisterViewController.m; sourceTree = "<group>"; };
 		D0C0E81218880C810025AE95 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		D0C0F5921888CC6000A67017 /* login-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button@2x.png"; sourceTree = "<group>"; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -291,6 +297,9 @@
 		D0BECB8C1886BE4A00D4A00F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D0C0F5921888CC6000A67017 /* login-button@2x.png */,
+				D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */,
+				D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */,
 				D0C0E81218880C810025AE95 /* close@2x.png */,
 				D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */,
 			);
@@ -555,13 +564,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C0E81318880C810025AE95 /* close@2x.png in Resources */,
+				D0B9CFAD1888C2CE00FC636D /* register-button@2x.png in Resources */,
 				D0BECBD21886CDF900D4A00F /* 1@2x.png in Resources */,
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+				D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */,
 				D0EE9F4A18857605001FF050 /* zbar-help.html in Resources */,
 				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,
 				D0BECBD41886CDF900D4A00F /* login@2x.png in Resources */,
 				D0BECBD31886CDF900D4A00F /* 1-568h@2x.png in Resources */,
 				D0EE9F4C18857605001FF050 /* zbar-samples.png in Resources */,
+				D0C0F5931888CC6000A67017 /* login-button@2x.png in Resources */,
 				D0BECB991886C7B100D4A00F /* ICETutorialController_iPhone.xib in Resources */,
 				D0EE9F4B18857605001FF050 /* zbar-helpicons.png in Resources */,
 				D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */,

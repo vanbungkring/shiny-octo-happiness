@@ -129,14 +129,14 @@
 	__unsafe_unretained typeof(self) weakSelf = self;
     // Set button 1 action.
     [self.viewController setButton1Block:^(UIButton *button){
-        [weakSelf call:@"blincLoginViewController"];
+        [weakSelf call:@"blincRegisterViewController"];
     }];
     
     // Set button 2 action, stop the scrolling.
 	
     [self.viewController setButton2Block:^(UIButton *button){
         
-        [weakSelf call:@"blincRegisterViewController"];
+        [weakSelf call:@"blincLoginViewController"];
     }];
     
     // Run it.

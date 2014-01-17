@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface blincRegisterViewController : UIViewController
-
+@interface blincRegisterViewController : UIViewController<UIScrollViewDelegate>
+{
+	UIView *wrapper;
+	UIScrollView *scrollview;
+	UITextField *username;
+	UITextField *password;
+	UITextField *password_again;
+	UIButton *register_button;
+	UILabel *terms;
+	
+}
 @end

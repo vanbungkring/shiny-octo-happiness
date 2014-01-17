@@ -10,7 +10,10 @@
 
 @interface blincLoginViewController : UIViewController
 {
+	UIView *wrapper;
+	UIScrollView *scrollview;
 	UITextField *userName;
 	UITextField *password;
+	UIButton *login_button;
 }
 @end
