@@ -51,8 +51,11 @@
     
     
     UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
+	[navigationController1.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 	UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"qrcodeViewController") alloc]init]];
+	[navigationController2.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav-qr"] forBarMetrics:UIBarMetricsDefault];
 	UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"myPlaceViewController") alloc]init]];
+	[navigationController3.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 	
     
     [tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
@@ -60,6 +63,7 @@
 										  navigationController2,
 										  navigationController3,nil]];
 	
+	 [tabBarController setSelectedIndex:1];
     // If needed, disable the resizing when switching display orientations.
     /*
 	 [_tabBarController setTabBarHasFixedHeight:YES];

@@ -56,6 +56,7 @@
 		D0EB80A118891F0E00120627 /* qrcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80A018891F0E00120627 /* qrcodeViewController.m */; };
 		D0EB80A418891F2100120627 /* myPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80A318891F2100120627 /* myPlaceViewController.m */; };
 		D0EB80A718891F4900120627 /* nearbyPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80A618891F4900120627 /* nearbyPlaceViewController.m */; };
+		D0EB80A91889234900120627 /* nav-qr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80A81889234900120627 /* nav-qr@2x.png */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -154,6 +155,7 @@
 		D0EB80A318891F2100120627 /* myPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPlaceViewController.m; sourceTree = "<group>"; };
 		D0EB80A518891F4900120627 /* nearbyPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyPlaceViewController.h; sourceTree = "<group>"; };
 		D0EB80A618891F4900120627 /* nearbyPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyPlaceViewController.m; sourceTree = "<group>"; };
+		D0EB80A81889234900120627 /* nav-qr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-qr@2x.png"; sourceTree = "<group>"; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		D0BECB8C1886BE4A00D4A00F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB80A81889234900120627 /* nav-qr@2x.png */,
 				D0C0F5921888CC6000A67017 /* login-button@2x.png */,
 				D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */,
 				D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */,
@@ -730,6 +733,7 @@
 				D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */,
 				D0EE9F4A18857605001FF050 /* zbar-help.html in Resources */,
 				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,
+				D0EB80A91889234900120627 /* nav-qr@2x.png in Resources */,
 				D0BECBD41886CDF900D4A00F /* login@2x.png in Resources */,
 				D0BECBD31886CDF900D4A00F /* 1-568h@2x.png in Resources */,
 				D0EE9F4C18857605001FF050 /* zbar-samples.png in Resources */,

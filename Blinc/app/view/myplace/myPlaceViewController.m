@@ -19,7 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		self.view.backgroundColor = [UIColor redColor];
+		self.view.backgroundColor = [UIColor whiteColor];
+		self.title = @"My Places";
     }
     return self;
 }
