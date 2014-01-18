@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D037FDAD188A2E8B009E36D3 /* cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D037FDAC188A2E8B009E36D3 /* cell@2x.png */; };
+		D037FDB1188A3732009E36D3 /* myplaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D037FDB0188A3732009E36D3 /* myplaceDetailViewController.m */; };
 		D0699ED61876E6BD0029F6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED51876E6BD0029F6FD /* Foundation.framework */; };
 		D0699ED81876E6BD0029F6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */; };
 		D0699EDA1876E6BD0029F6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED91876E6BD0029F6FD /* UIKit.framework */; };
@@ -94,6 +95,8 @@
 
 /* Begin PBXFileReference section */
 		D037FDAC188A2E8B009E36D3 /* cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell@2x.png"; sourceTree = "<group>"; };
+		D037FDAF188A3732009E36D3 /* myplaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myplaceDetailViewController.h; sourceTree = "<group>"; };
+		D037FDB0188A3732009E36D3 /* myplaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myplaceDetailViewController.m; sourceTree = "<group>"; };
 		D0699ED21876E6BD0029F6FD /* Blinc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blinc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0699ED51876E6BD0029F6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -254,6 +257,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D037FDAE188A371A009E36D3 /* myplace-detail */ = {
+			isa = PBXGroup;
+			children = (
+				D037FDAF188A3732009E36D3 /* myplaceDetailViewController.h */,
+				D037FDB0188A3732009E36D3 /* myplaceDetailViewController.m */,
+			);
+			path = "myplace-detail";
+			sourceTree = "<group>";
+		};
 		D0699EC91876E6BD0029F6FD = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +505,7 @@
 		D0EB808418891A1300120627 /* myplace */ = {
 			isa = PBXGroup;
 			children = (
+				D037FDAE188A371A009E36D3 /* myplace-detail */,
 				D0EB80A218891F2100120627 /* myPlaceViewController.h */,
 				D0EB80A318891F2100120627 /* myPlaceViewController.m */,
 			);
@@ -820,6 +833,7 @@
 				D0EB807C188913EE00120627 /* orc.m in Sources */,
 				D0EB809C18891AB500120627 /* UINavigationController+AKTabBarController.m in Sources */,
 				D0EE9F61188576CE001FF050 /* AFHTTPRequestOperation.m in Sources */,
+				D037FDB1188A3732009E36D3 /* myplaceDetailViewController.m in Sources */,
 				D0EB80A718891F4900120627 /* nearbyPlaceViewController.m in Sources */,
 				D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */,
 				D0EE9F62188576CE001FF050 /* AFHTTPRequestOperationManager.m in Sources */,

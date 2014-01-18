@@ -7,7 +7,7 @@
 //
 
 #import "myPlaceViewController.h"
-
+#import "myplaceDetailViewController.h"
 @interface myPlaceViewController ()
 
 @end
@@ -47,6 +47,10 @@
 		cell = [[blincCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cells];
 	}
 	return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	myplaceDetailViewController *detail = [[myplaceDetailViewController alloc]init];
+	[self.navigationController pushViewController:detail animated:YES];
 }
 - (NSString *)tabBackgroundImageName {
     return @"my-place";

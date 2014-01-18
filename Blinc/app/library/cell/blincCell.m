@@ -24,17 +24,20 @@
 		self.merchantName = [[UILabel alloc]initWithFrame:CGRectMake(60, 10, 200, 20)];
 		self.merchantName.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:17];
 		self.merchantName.text = @"Starbucks";
-		
+		self.merchantName.textColor =[UIColor colorWithRed:0.467 green:0.467 blue:0.467 alpha:1];
+									  
 		self.merchantAlamat = [[UILabel alloc]initWithFrame:CGRectMake(60, 30, 200, 18)];
 		self.merchantAlamat.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+		self.merchantAlamat.textColor =[UIColor colorWithRed:0.765 green:0.765 blue:0.765 alpha:1];
 		self.merchantAlamat.text = @"Kemang Timur 2";
 		
 		self.merchantCategory = [[UILabel alloc]initWithFrame:CGRectMake(60, 45, 200, 18)];
 		self.merchantCategory.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
 		self.merchantCategory.text = @"Kemang Timur 2  -";
+		self.merchantCategory.textColor =[UIColor colorWithRed:0.765 green:0.765 blue:0.765 alpha:1];
 		
 		self.my_point_wrapper = [[UIView alloc]initWithFrame:CGRectMake(257, 20, 34, 34)];
-		self.my_point_wrapper.backgroundColor= [UIColor colorWithRed:0.89 green:0.714 blue:0 alpha:1];
+		self.my_point_wrapper.backgroundColor= [UIColor clearColor];
 		self.my_point_wrapper.layer.cornerRadius = 34*0.5;
 
 		self.myPoint = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 34, 34)];
