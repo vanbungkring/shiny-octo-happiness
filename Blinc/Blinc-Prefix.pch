@@ -17,5 +17,7 @@
 #import "ZBarSDK.h"
 #import "AFNetworking.h"
 #import "orc.h"
+#import "blincCell.h"
+#import "blincGate.h"
 #define ROOTVIEW [[[UIApplication sharedApplication] keyWindow] rootViewController]
 #endif

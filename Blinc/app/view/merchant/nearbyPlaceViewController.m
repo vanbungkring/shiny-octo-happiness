@@ -24,7 +24,9 @@
     }
     return self;
 }
-
+- (NSString *)tabBackgroundImageName {
+    return @"location";
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

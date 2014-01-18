@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface myPlaceViewController : UIViewController
-
+@interface myPlaceViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	UITableView *tablePlace;
+}
 @end

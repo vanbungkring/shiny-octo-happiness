@@ -27,7 +27,7 @@
 static const int kDefaultTabBarHeight = 50;
 
 // Default Push animation duration
-static const float kPushAnimationDuration = 0.35;
+static const float kPushAnimationDuration = 0.15;
 
 @interface AKTabBarController ()
 {
@@ -56,7 +56,7 @@ typedef enum {
     
     // Tab Bar height
     NSUInteger tabBarHeight;
-
+	
     // Tab Bar position
     AKTabBarPosition tabBarPosition;
 }
@@ -64,32 +64,32 @@ typedef enum {
 #pragma mark - Initialization
 
 - (id)init
-{    
+{
     return [self initWithTabBarHeight:kDefaultTabBarHeight];
 }
 
 - (id)initWithTabBarHeight:(NSUInteger)height
 {
-  self = [super init];
-  if (!self) return nil;
-  
-  tabBarHeight = height;
-  
-  // default settings
-  _iconShadowOffset = CGSizeMake(0, -1);
-  
-  _tabWidth = 0.0f;
-  
-  return self;
+	self = [super init];
+	if (!self) return nil;
+	
+	tabBarHeight = height;
+	
+	// default settings
+	_iconShadowOffset = CGSizeMake(0, -1);
+	
+	_tabWidth = 0.0f;
+	
+	return self;
 }
 
 - (id)initWithTabBarHeight:(NSUInteger)height position:(AKTabBarPosition)position
 {
     self = [self initWithTabBarHeight:height];
     if (!self) return nil;
-
+	
     tabBarPosition = position;
-
+	
     return self;
 }
 
@@ -121,10 +121,8 @@ typedef enum {
 {
     NSMutableArray *tabs = [[NSMutableArray alloc] init];
 
-    [[tabBarView tabBar] setTabColors:[self tabCGColors]];
-    [[tabBarView tabBar] setEdgeColor:[self tabEdgeColor]];
-    [[tabBarView tabBar] setTopEdgeColor:[self topEdgeColor]];
-
+	
+	NSInteger datax=1;
     for (UIViewController *vc in self.viewControllers) {
         AKTab *tab = [[AKTab alloc] init];
         [tab setTabImageWithName:[vc tabImageName]];
@@ -136,25 +134,20 @@ typedef enum {
             [tab setBackgroundImageName:[self backgroundImageName]];
         }
         
-        [tab setSelectedBackgroundImageName:[self selectedBackgroundImageName]];
-        [tab setBackgroundImageCapInsets:[self backgroundImageCapInsets]];
-        [tab setTabIconColors:[self iconCGColors]];
-        [tab setTabIconShadowColor:[self iconShadowColor]];
-        [tab setTabIconShadowOffset:[self iconShadowOffset]];
-        [tab setTabIconColorsSelected:[self selectedIconCGColors]];
-        [tab setTabIconOuterGlowColorSelected:[self selectedIconOuterGlowColor]];
-        [tab setTabSelectedColors:[self selectedTabCGColors]];
-        [tab setEdgeColor:[self tabEdgeColor]];
-        [tab setTopEdgeColor:[self topEdgeColor]];
-        [tab setTabIconPreRendered:[self tabIconPreRendered]];
-        [tab setGlossyIsHidden:[self iconGlossyIsHidden]];
-        [tab setStrokeColor:[self tabStrokeColor]];
-        [tab setInnerStrokeColor:[self tabInnerStrokeColor]];
-        [tab setTextColor:[self textColor]];
-        [tab setSelectedTextColor:[self selectedTextColor]];
-        [tab setTabTitleFont:[self textFont]];
-        [tab setTabTitle:[vc tabTitle]];
-
+		switch (datax) {
+			case 1:
+				[tab setSelectedBackgroundImageName:@"location"];
+				break;
+			case 2:
+				[tab setSelectedBackgroundImageName:@"scan"];
+				break;
+			case 3:
+				[tab setSelectedBackgroundImageName:@"my-place-active"];
+				break;
+		}
+        
+       
+		
         [tab setTabBarHeight:tabBarHeight];
         
         if (_minimumHeightToDisplayTitle)
@@ -167,6 +160,7 @@ typedef enum {
             ((UINavigationController *)vc).delegate = self;
         
         [tabs addObject:tab];
+		datax++;
     }
     
     [tabBar setTabs:tabs];
@@ -299,9 +293,10 @@ typedef enum {
     if([self respondsToSelector:@selector(addChildViewController:)]) {
         for(UIViewController* vc in _viewControllers) {
             [self addChildViewController:vc];
+			
         }
     }
-
+	
     // When setting the view controllers, the first vc is the selected one;
     if ([viewControllers count] > 0) [self setSelectedViewController:viewControllers[0]];
     
@@ -313,7 +308,7 @@ typedef enum {
 {
     UIViewController *previousSelectedViewController = _selectedViewController;
     NSInteger selectedIndex = [self.viewControllers indexOfObject:selectedViewController];
-    
+	NSLog(@"data");
     if (_selectedViewController != selectedViewController && selectedIndex != NSNotFound)
     {
         
@@ -333,7 +328,7 @@ typedef enum {
 			[previousSelectedViewController viewDidDisappear:NO];
 			[selectedViewController viewDidAppear:NO];
 		}
-        
+        [tabBar setBackgroundColor:[UIColor redColor]];
         [tabBar setSelectedTab:(tabBar.tabs)[selectedIndex]];
     }
 }

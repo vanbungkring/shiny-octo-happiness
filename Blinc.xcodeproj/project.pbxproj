@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D037FDAD188A2E8B009E36D3 /* cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D037FDAC188A2E8B009E36D3 /* cell@2x.png */; };
 		D0699ED61876E6BD0029F6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED51876E6BD0029F6FD /* Foundation.framework */; };
 		D0699ED81876E6BD0029F6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */; };
 		D0699EDA1876E6BD0029F6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0699ED91876E6BD0029F6FD /* UIKit.framework */; };
@@ -57,6 +58,13 @@
 		D0EB80A418891F2100120627 /* myPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80A318891F2100120627 /* myPlaceViewController.m */; };
 		D0EB80A718891F4900120627 /* nearbyPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80A618891F4900120627 /* nearbyPlaceViewController.m */; };
 		D0EB80A91889234900120627 /* nav-qr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80A81889234900120627 /* nav-qr@2x.png */; };
+		D0EB80AD1889298700120627 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80AB1889298700120627 /* location@2x.png */; };
+		D0EB80AE1889298700120627 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80AC1889298700120627 /* scan@2x.png */; };
+		D0EB80B018892B7700120627 /* my-place@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80AF18892B7700120627 /* my-place@2x.png */; };
+		D0EB80B218892E1600120627 /* my-place-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80B118892E1600120627 /* my-place-active@2x.png */; };
+		D0EB80B418894A0900120627 /* tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80B318894A0900120627 /* tab@2x.png */; };
+		D0EB80B61889500700120627 /* overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB80B51889500700120627 /* overlay@2x.png */; };
+		D0EB80BA1889517C00120627 /* blincCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80B91889517C00120627 /* blincCell.m */; };
 		D0EE9F2918856F13001FF050 /* blincLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE9F2618856F13001FF050 /* blincLoginViewController.m */; };
 		D0EE9F4818857605001FF050 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE9F4218857605001FF050 /* libzbar.a */; };
 		D0EE9F4918857605001FF050 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EE9F4418857605001FF050 /* zbar-back.png */; };
@@ -85,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D037FDAC188A2E8B009E36D3 /* cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell@2x.png"; sourceTree = "<group>"; };
 		D0699ED21876E6BD0029F6FD /* Blinc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blinc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0699ED51876E6BD0029F6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0699ED71876E6BD0029F6FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +165,14 @@
 		D0EB80A518891F4900120627 /* nearbyPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyPlaceViewController.h; sourceTree = "<group>"; };
 		D0EB80A618891F4900120627 /* nearbyPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyPlaceViewController.m; sourceTree = "<group>"; };
 		D0EB80A81889234900120627 /* nav-qr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-qr@2x.png"; sourceTree = "<group>"; };
+		D0EB80AB1889298700120627 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		D0EB80AC1889298700120627 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
+		D0EB80AF18892B7700120627 /* my-place@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my-place@2x.png"; sourceTree = "<group>"; };
+		D0EB80B118892E1600120627 /* my-place-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my-place-active@2x.png"; sourceTree = "<group>"; };
+		D0EB80B318894A0900120627 /* tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab@2x.png"; sourceTree = "<group>"; };
+		D0EB80B51889500700120627 /* overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay@2x.png"; sourceTree = "<group>"; };
+		D0EB80B81889517C00120627 /* blincCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincCell.h; sourceTree = "<group>"; };
+		D0EB80B91889517C00120627 /* blincCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincCell.m; sourceTree = "<group>"; };
 		D0EE9F2518856F13001FF050 /* blincLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blincLoginViewController.h; sourceTree = "<group>"; };
 		D0EE9F2618856F13001FF050 /* blincLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blincLoginViewController.m; sourceTree = "<group>"; };
 		D0EE9F2E18857605001FF050 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -347,6 +364,7 @@
 		D0699F081876E7F40029F6FD /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB80B7188950EB00120627 /* cell */,
 				D0EB808618891AB500120627 /* AKTabBarController */,
 				D0C0F5A01888D79700A67017 /* helper */,
 				D0BECB8F1886C67A00D4A00F /* Libraries */,
@@ -367,6 +385,7 @@
 		D0699F0D1876EA360029F6FD /* common-assets */ = {
 			isa = PBXGroup;
 			children = (
+				D0EB80AA1889298700120627 /* tab */,
 				D0BECBCB1886CDF900D4A00F /* welcomeImage */,
 				D0BECB8C1886BE4A00D4A00F /* common */,
 				D0699F0E1876EABB0029F6FD /* blinc-bg@2x.png */,
@@ -377,6 +396,7 @@
 		D0BECB8C1886BE4A00D4A00F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D037FDAC188A2E8B009E36D3 /* cell@2x.png */,
 				D0EB80A81889234900120627 /* nav-qr@2x.png */,
 				D0C0F5921888CC6000A67017 /* login-button@2x.png */,
 				D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */,
@@ -509,6 +529,28 @@
 				D0EB809618891AB500120627 /* UIViewController+AKTabBarController.m */,
 			);
 			path = AKTabBarController;
+			sourceTree = "<group>";
+		};
+		D0EB80AA1889298700120627 /* tab */ = {
+			isa = PBXGroup;
+			children = (
+				D0EB80B51889500700120627 /* overlay@2x.png */,
+				D0EB80B318894A0900120627 /* tab@2x.png */,
+				D0EB80AB1889298700120627 /* location@2x.png */,
+				D0EB80B118892E1600120627 /* my-place-active@2x.png */,
+				D0EB80AF18892B7700120627 /* my-place@2x.png */,
+				D0EB80AC1889298700120627 /* scan@2x.png */,
+			);
+			path = tab;
+			sourceTree = "<group>";
+		};
+		D0EB80B7188950EB00120627 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0EB80B81889517C00120627 /* blincCell.h */,
+				D0EB80B91889517C00120627 /* blincCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		D0EE9F2218856F13001FF050 /* view */ = {
@@ -726,22 +768,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D037FDAD188A2E8B009E36D3 /* cell@2x.png in Resources */,
+				D0EB80B018892B7700120627 /* my-place@2x.png in Resources */,
 				D0C0E81318880C810025AE95 /* close@2x.png in Resources */,
 				D0B9CFAD1888C2CE00FC636D /* register-button@2x.png in Resources */,
 				D0BECBD21886CDF900D4A00F /* 1@2x.png in Resources */,
+				D0EB80B218892E1600120627 /* my-place-active@2x.png in Resources */,
+				D0EB80B61889500700120627 /* overlay@2x.png in Resources */,
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
 				D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */,
 				D0EE9F4A18857605001FF050 /* zbar-help.html in Resources */,
 				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,
 				D0EB80A91889234900120627 /* nav-qr@2x.png in Resources */,
 				D0BECBD41886CDF900D4A00F /* login@2x.png in Resources */,
+				D0EB80AD1889298700120627 /* location@2x.png in Resources */,
 				D0BECBD31886CDF900D4A00F /* 1-568h@2x.png in Resources */,
 				D0EE9F4C18857605001FF050 /* zbar-samples.png in Resources */,
 				D0C0F5931888CC6000A67017 /* login-button@2x.png in Resources */,
+				D0EB80B418894A0900120627 /* tab@2x.png in Resources */,
 				D0BECB991886C7B100D4A00F /* ICETutorialController_iPhone.xib in Resources */,
 				D0EE9F4B18857605001FF050 /* zbar-helpicons.png in Resources */,
 				D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */,
 				D0EE9F4918857605001FF050 /* zbar-back.png in Resources */,
+				D0EB80AE1889298700120627 /* scan@2x.png in Resources */,
 				D0EB809918891AB500120627 /* AKTabBarController.bundle in Resources */,
 				D0699F0F1876EABB0029F6FD /* blinc-bg@2x.png in Resources */,
 				D0699EE81876E6BD0029F6FD /* Images.xcassets in Resources */,
@@ -784,6 +833,7 @@
 				D0EE9F65188576CE001FF050 /* AFSecurityPolicy.m in Sources */,
 				D0EE9F63188576CE001FF050 /* AFHTTPSessionManager.m in Sources */,
 				D0EE9F67188576CE001FF050 /* AFURLRequestSerialization.m in Sources */,
+				D0EB80BA1889517C00120627 /* blincCell.m in Sources */,
 				D0EB80A118891F0E00120627 /* qrcodeViewController.m in Sources */,
 				D0BECB951886C67A00D4A00F /* ICETutorialPage.m in Sources */,
 				D0EE9F69188576CE001FF050 /* AFURLSessionManager.m in Sources */,
