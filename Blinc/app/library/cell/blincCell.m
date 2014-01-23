@@ -60,7 +60,10 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+	UIImageView *selecetedCellBG = [[UIImageView alloc] initWithFrame:self.contentView.frame];
+	[selecetedCellBG setImage:[UIImage imageNamed:@"cell-selection"]];//Set Name for selected Cell
+	[selecetedCellBG setBackgroundColor:[UIColor clearColor]];
+	[self setSelectedBackgroundView:selecetedCellBG ];
     // Configure the view for the selected state
 }
 

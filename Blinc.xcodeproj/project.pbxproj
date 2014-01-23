@@ -36,6 +36,9 @@
 		D0928FBE189021B5001F185F /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D0928FB9189021B5001F185F /* RDVTabBar.m */; };
 		D0928FBF189021B5001F185F /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0928FBB189021B5001F185F /* RDVTabBarController.m */; };
 		D0928FC0189021B5001F185F /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D0928FBD189021B5001F185F /* RDVTabBarItem.m */; };
+		D0A289381891451E00F6463D /* cell-selection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A289371891451E00F6463D /* cell-selection@2x.png */; };
+		D0A2893A1891642100F6463D /* point-here@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A289391891642100F6463D /* point-here@2x.png */; };
+		D0A2893C1891656A00F6463D /* see-rewards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A2893B1891656A00F6463D /* see-rewards@2x.png */; };
 		D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */; };
 		D0B9CFAD1888C2CE00FC636D /* register-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */; };
 		D0BECB8E1886BE4A00D4A00F /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */; };
@@ -140,6 +143,9 @@
 		D0928FBB189021B5001F185F /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
 		D0928FBC189021B5001F185F /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
 		D0928FBD189021B5001F185F /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
+		D0A289371891451E00F6463D /* cell-selection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell-selection@2x.png"; sourceTree = "<group>"; };
+		D0A289391891642100F6463D /* point-here@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point-here@2x.png"; sourceTree = "<group>"; };
+		D0A2893B1891656A00F6463D /* see-rewards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "see-rewards@2x.png"; sourceTree = "<group>"; };
 		D0B9CFAA1888B46600FC636D /* register-login-form@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-login-form@2x.png"; sourceTree = "<group>"; };
 		D0B9CFAC1888C2CE00FC636D /* register-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-button@2x.png"; sourceTree = "<group>"; };
 		D0BECB8D1886BE4A00D4A00F /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
@@ -436,6 +442,9 @@
 		D0BECB8C1886BE4A00D4A00F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D0A2893B1891656A00F6463D /* see-rewards@2x.png */,
+				D0A289391891642100F6463D /* point-here@2x.png */,
+				D0A289371891451E00F6463D /* cell-selection@2x.png */,
 				D026A910189100850094ACBD /* info-scan@2x.png */,
 				D037FDAC188A2E8B009E36D3 /* cell@2x.png */,
 				D0EB80A81889234900120627 /* nav-qr@2x.png */,
@@ -729,7 +738,9 @@
 				D037FDAD188A2E8B009E36D3 /* cell@2x.png in Resources */,
 				D026A8F51890F6D50094ACBD /* location-active@2x.png in Resources */,
 				D0EB80B018892B7700120627 /* my-place@2x.png in Resources */,
+				D0A289381891451E00F6463D /* cell-selection@2x.png in Resources */,
 				D0C0E81318880C810025AE95 /* close@2x.png in Resources */,
+				D0A2893C1891656A00F6463D /* see-rewards@2x.png in Resources */,
 				D026A911189100850094ACBD /* info-scan@2x.png in Resources */,
 				D0B9CFAD1888C2CE00FC636D /* register-button@2x.png in Resources */,
 				D0BECBD21886CDF900D4A00F /* 1@2x.png in Resources */,
@@ -737,6 +748,7 @@
 				D026A8F31890F51C0094ACBD /* scan_active@2x.png in Resources */,
 				D0EB80B61889500700120627 /* overlay@2x.png in Resources */,
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+				D0A2893A1891642100F6463D /* point-here@2x.png in Resources */,
 				D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */,
 				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,
 				D0EB80A91889234900120627 /* nav-qr@2x.png in Resources */,

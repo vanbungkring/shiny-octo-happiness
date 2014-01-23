@@ -48,9 +48,15 @@
 	}
 	return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	myplaceDetailViewController *detail = [[myplaceDetailViewController alloc]init];
 	[self.navigationController pushViewController:detail animated:YES];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+}
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
 }
 - (NSString *)tabBackgroundImageName {
     return @"my-place";

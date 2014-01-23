@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface myplaceDetailViewController : UIViewController
+@interface myplaceDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	UITableView *table_place;
+	UIImageView *_headerImage;
+	UILabel *about;
+	UILabel *website;
+	UILabel *phone;
+	
+	UILabel *store_name;
+	UILabel *store_address;
+	
+	MKMapView * mapView;
+}
 
 @end
