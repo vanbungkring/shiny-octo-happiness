@@ -36,7 +36,7 @@
 		self.merchantCategory.text = @"Kemang Timur 2  -";
 		self.merchantCategory.textColor =[UIColor colorWithRed:0.765 green:0.765 blue:0.765 alpha:1];
 		
-		self.my_point_wrapper = [[UIView alloc]initWithFrame:CGRectMake(257, 20, 34, 34)];
+		self.my_point_wrapper = [[UIView alloc]initWithFrame:CGRectMake(255, 20, 34, 34)];
 		self.my_point_wrapper.backgroundColor= [UIColor clearColor];
 		self.my_point_wrapper.layer.cornerRadius = 34*0.5;
 

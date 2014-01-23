@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AKTabBarController.h"
-@interface blincAppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
+@interface blincAppDelegate : UIResponder <UIApplicationDelegate>
 {
 	UINavigationController *nav;
-	//AKTabBarController *tabBarController;
-	UITabBarController *tabBarController;
 	
 }
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) ICETutorialController *viewController;
+@property (strong, nonatomic) UIViewController *mainViewController;
 -(void)checkToken;
 @end

@@ -8,11 +8,21 @@
 
 #import "blincAppDelegate.h"
 #import "blincLoginViewController.h"
+
 @implementation blincAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200.f, 0) forBarMetrics:UIBarMetricsDefault];
+	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+	NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor clearColor];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:18], NSFontAttributeName, nil]];
     // Override point for customization after application launch.
 	[self checkToken];
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -32,15 +42,7 @@
 	
 }
 -(void)loadpage{
-	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200.f, 0) forBarMetrics:UIBarMetricsDefault];
-	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-	NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = [UIColor clearColor];
-    shadow.shadowOffset = CGSizeMake(0, 1);
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                           shadow, NSShadowAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:18], NSFontAttributeName, nil]];
+
 	
 	UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
 	[navigationController1.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
@@ -49,68 +51,35 @@
 	UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"myPlaceViewController") alloc]init]];
 	[navigationController3.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 	
-	NSArray* controllers = [NSArray arrayWithObjects:navigationController1, navigationController2, navigationController3, nil];
-	tabBarController = [[UITabBarController alloc]init];
-    
-	UITabBar *tabBar = tabBarController.tabBar;
-    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
-    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+	RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    [tabBarController setViewControllers:@[navigationController1, navigationController2,
+                                           navigationController3]];
+	self.window.rootViewController=tabBarController;
+	[self customizeTabBarForController:tabBarController];
 	
-    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tab"]];
-	[[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
-	tabBarItem1.selectedImage = [[UIImage imageNamed:@"location"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem1.image = [[UIImage imageNamed:@"scan"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem1.title = @"xxxx";
-	
-	tabBarItem2.selectedImage = [[UIImage imageNamed:@"scan"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem2.image = [[UIImage imageNamed:@"location"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem2.title = @"xxxx";
-	
-	tabBarItem3.selectedImage = [[UIImage imageNamed:@"location"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem3.image = [[UIImage imageNamed:@"scan"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-	tabBarItem3.title = @"xxxx";
-
-	tabBarController.viewControllers = controllers;
-	[self.window setRootViewController:tabBarController];
-	
-	//	// If the device is an iPad, we make it taller.
-	//    tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 48];
-	//
-	//    // Comment out the line above and uncomment the line below to show the tab bar at the top of the UI.
-	//    /*
-	//	 _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50 position:AKTabBarPositionBottom];
-	//     */
-	//
-	//    [tabBarController setMinimumHeightToDisplayTitle:40.0];
-	//
-	//
-	//    UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
-	//	[navigationController1.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-	//	UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"qrcodeViewController") alloc]init]];
-	//	[navigationController2.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav-qr"] forBarMetrics:UIBarMetricsDefault];
-	//	UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"myPlaceViewController") alloc]init]];
-	//	[navigationController3.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-	//
-	//
-	//    [tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
-	//										  navigationController1,
-	//										  navigationController2,
-	//										  navigationController3,nil]];
-	//
-	//	 [tabBarController setSelectedIndex:1];
-	//	[tabBarController setTabEdgeColor:[UIColor clearColor]];
-	//    [tabBarController setTabInnerStrokeColor:[UIColor clearColor]];
-	//    [tabBarController setTabStrokeColor:[UIColor clearColor]];
-	//    [tabBarController setTopEdgeColor:[UIColor clearColor]];
-	//    // If needed, disable the resizing when switching display orientations.
-	//    /*
-	//	 [_tabBarController setTabBarHasFixedHeight:YES];
-	//     */
-	//	[self.window setRootViewController:tabBarController];
 	
 }
+- (void)customizeTabBarForController:(RDVTabBarController *)tabBarControllers {
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarControllers tabBar] items]) {
+		switch (index) {
+			case 0:
+				[item setBackgroundSelectedImage:[UIImage imageNamed:@"location-active"] withUnselectedImage:[UIImage imageNamed:@"location"]];
+				break;
+			case 1:
+				[item setBackgroundSelectedImage:[UIImage imageNamed:@"scan_active"] withUnselectedImage:[UIImage imageNamed:@"scan"]];
+				break;
+				
+			default:
+				[item setBackgroundSelectedImage:[UIImage imageNamed:@"my-place-active"] withUnselectedImage:[UIImage imageNamed:@"my-place"]];
+				break;
+		}
+		[item setTitle:@""];
+        
+        index++;
+    }
+}
+   
 -(void)showIntro{
 	// Init the pages texts, and pictures.
 	NSArray *tutorialLayers = nil;

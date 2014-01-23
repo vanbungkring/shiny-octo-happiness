@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface qrcodeViewController : UIViewController
-
+{
+	UIImageView *image;
+}
 @end

@@ -20,6 +20,9 @@
     if (self) {
         // Custom initialization
 		self.view.backgroundColor = [UIColor whiteColor];
+		image = [[UIImageView alloc]initWithFrame:CGRectMake(60, 20, 200, 200)];
+		 image.image = [UIImage mdQRCodeForString:@"lorem ipsum dolor sit amet" size:image.bounds.size.width fillColor:[UIColor blackColor]];
+		[self.view addSubview:image];
     }
     return self;
 }

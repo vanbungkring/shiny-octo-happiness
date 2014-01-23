@@ -14,10 +14,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "ICETutorialController.h"
-#import "ZBarSDK.h"
+#import "UIImage+MDQRCode.h"
 #import "AFNetworking.h"
 #import "orc.h"
 #import "blincCell.h"
+#import "RDVTabBarController.h"
+#import "RDVTabBarItem.h"
 #import "blincGate.h"
 #define ROOTVIEW [[[UIApplication sharedApplication] keyWindow] rootViewController]
 #endif
