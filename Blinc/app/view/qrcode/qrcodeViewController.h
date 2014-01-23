@@ -11,5 +11,7 @@
 @interface qrcodeViewController : UIViewController
 {
 	UIImageView *image;
+	UILabel *email;
+	UILabel *usercode;
 }
 @end

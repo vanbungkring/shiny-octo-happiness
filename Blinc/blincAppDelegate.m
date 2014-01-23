@@ -55,6 +55,7 @@
     [tabBarController setViewControllers:@[navigationController1, navigationController2,
                                            navigationController3]];
 	self.window.rootViewController=tabBarController;
+	tabBarController.selectedIndex = 1;
 	[self customizeTabBarForController:tabBarController];
 	
 	
