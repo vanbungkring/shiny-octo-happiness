@@ -31,6 +31,14 @@
     return YES;
 }
 - (void)checkToken{
+	
+	[[netraNetwork sharedClient]GET:@"me/places" parameters:Nil success:^(NSURLSessionDataTask *task, id responseObject) {
+		NSLog(@"data--->%@",responseObject);
+	} failure:^(NSURLSessionDataTask *task, NSError *error) {
+		NSLog(@"data->%@",[netraNetwork sharedClient]);
+		NSLog(@"error--->%@",error.userInfo);
+		NSLog(@"error--->%@",task.response);
+	}];
 	int x=0;
 	if(x==1){
 		[self showIntro];

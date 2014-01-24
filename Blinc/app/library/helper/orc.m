@@ -10,8 +10,8 @@
 
 @implementation orc
 #ifdef DEBUG
-NSString* const serverUrl = @"http://192.241.173.178/ipin/index.php/api/";
+NSString* const serverUrl = @"http://dev.getblinc.com:8080/api/v1/";
 #else
-NSString *const serverUrl = @"http://192.241.173.178/ipin/index.php/api/";
+NSString *const serverUrl = @"http://dev.getblinc.com:8080/api/v1/";
 #endif
 @end
