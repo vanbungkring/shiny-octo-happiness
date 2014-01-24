@@ -17,6 +17,7 @@
 #import "ICETutorialController.h"
 #import "UIImage+MDQRCode.h"
 #import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 #import "orc.h"
 #import "blincCell.h"
 #import "RDVTabBarController.h"

@@ -9,5 +9,8 @@
 #import "blincGate.h"
 
 @implementation blincGate
++ (NSURLSessionDataTask *)getPlace:(void (^)(NSArray *returnData, NSError *error))block{
+	return Nil;
 
+}
 @end

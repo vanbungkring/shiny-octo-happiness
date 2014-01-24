@@ -14,38 +14,44 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
 	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200.f, 0) forBarMetrics:UIBarMetricsDefault];
+	
 	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+	
 	NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = [UIColor clearColor];
-    shadow.shadowOffset = CGSizeMake(0, 1);
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+    
+	shadow.shadowColor = [UIColor clearColor];
+    
+	shadow.shadowOffset = CGSizeMake(0, 1);
+    
+	[[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-Light" size:18], NSFontAttributeName, nil]];
     // Override point for customization after application launch.
+	
 	[self checkToken];
+	
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
 	[self.window makeKeyAndVisible];
-    return YES;
+    
+	return YES;
 }
 - (void)checkToken{
 	
-	[[netraNetwork sharedClient]GET:@"me/places" parameters:Nil success:^(NSURLSessionDataTask *task, id responseObject) {
-		NSLog(@"data--->%@",responseObject);
-	} failure:^(NSURLSessionDataTask *task, NSError *error) {
-		NSLog(@"data->%@",[netraNetwork sharedClient]);
-		NSLog(@"error--->%@",error.userInfo);
-		NSLog(@"error--->%@",task.response);
-	}];
-	int x=0;
-	if(x==1){
-		[self showIntro];
-	}
-	else{
+	if([[[orc getCrredentials] objectForKey:@"token"] isEqualToString:@""]){
+		
+		//[self showIntro];
 		[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
 		[self loadpage];
+	}
+	
+	else{
+		[self showIntro];
+		//[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
+		//[self loadpage];
 	}
 	
 }
@@ -54,15 +60,20 @@
 	
 	UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
 	[navigationController1.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	
 	UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"qrcodeViewController") alloc]init]];
 	[navigationController2.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav-qr"] forBarMetrics:UIBarMetricsDefault];
+	
 	UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"myPlaceViewController") alloc]init]];
 	[navigationController3.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	
 	
 	RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:@[navigationController1, navigationController2,
                                            navigationController3]];
+	
 	self.window.rootViewController=tabBarController;
+	
 	tabBarController.selectedIndex = 1;
 	[self customizeTabBarForController:tabBarController];
 	

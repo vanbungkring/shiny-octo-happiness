@@ -17,7 +17,7 @@
 		NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
 		
 		[config setHTTPAdditionalHeaders:@{@"content-Type": @"application/json"}];
-		[config setHTTPAdditionalHeaders:@{@"Authorization":@"Token 5896720b0f2d85009e5dc9df89f2d8aceea55466078b7a2093ae7e5c897fcaa5"}];
+		[config setHTTPAdditionalHeaders:@{@"Authorization":first_token}];
 		NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:10 * 1024 * 1024
                                                           diskCapacity:50 * 1024 * 1024
                                                               diskPath:nil];
