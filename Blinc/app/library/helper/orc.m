@@ -40,5 +40,9 @@ static orc *sharedObject;
 +(NSUserDefaults *)getCrredentials{
 	return [NSUserDefaults standardUserDefaults];
 }
++(void)showAlert:(NSString *)title message:(NSString *)message{
 
+	UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+	[alert show];
+}
 @end

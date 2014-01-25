@@ -14,4 +14,5 @@ extern NSString *const first_token;
 +(orc *) sharedInstance;
 +(void)setTokenCredentials:(NSString *)username email:(NSString *)email token:(NSString *)token;
 +(NSUserDefaults *)getCrredentials;
++(void)showAlert:(NSString *)title message:(NSString *)message;
 @end

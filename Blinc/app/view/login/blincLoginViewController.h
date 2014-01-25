@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface blincLoginViewController : UIViewController
+@interface blincLoginViewController : UIViewController<UITextFieldDelegate>
 {
 	UIView *wrapper;
 	UIScrollView *scrollview;

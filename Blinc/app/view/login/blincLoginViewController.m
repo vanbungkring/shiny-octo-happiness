@@ -34,7 +34,10 @@
 		userName = [[UITextField alloc]initWithFrame:CGRectMake(72, 220, 176, 36)];
 		userName.backgroundColor = [UIColor whiteColor];
 		userName.placeholder = @"Username";
+		userName.delegate = self;
+		userName.tag=1;
 		userName.layer.borderWidth = 0.8;
+		userName.returnKeyType = UIReturnKeyNext;
 		userName.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
 		userName.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
 		userName.layer.cornerRadius =5;
@@ -42,8 +45,11 @@
 		
 		password = [[UITextField alloc]initWithFrame:CGRectMake(72, 270, 176, 36)];
 		password.backgroundColor = [UIColor whiteColor];
+		password.tag =2;
 		password.placeholder = @"password";
 		password.layer.borderWidth = 0.8;
+		password.delegate = self;
+		password.returnKeyType = UIReturnKeyNext;
 		password.layer.borderColor = [UIColor colorWithRed:0.925 green:0.925 blue:0.925 alpha:1].CGColor;
 		password.font = [UIFont fontWithName:@"HeleticaNeue Bold" size:14];
 		password.layer.cornerRadius =5;
@@ -51,7 +57,7 @@
 		
 		login_button = [[UIButton alloc]initWithFrame:CGRectMake(72, 380, 176, 44.5)];
 		login_button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login-button"]];
-		
+		[login_button addTarget:self action:@selector(signUp) forControlEvents:UIControlEventTouchUpInside];
 		terms = [[UILabel alloc]initWithFrame:CGRectMake(20, 430, 280, 55)];
 		terms.text = @"By signing in, I accept BLINC*’s Terms of Service and Privacy Policy";
 		terms.numberOfLines = 2;
@@ -81,6 +87,52 @@
 	[close setFrame:CGRectMake(0, 0, 40, 40)];
 	[[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:close]];
 	// Do any additional setup after loading the view.
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+	if(textField.tag==1){
+		NSLog(@"1");
+		[scrollview setContentOffset:CGPointMake(0,70) animated:YES];
+		[scrollview setUserInteractionEnabled:NO];
+	}
+	else if (textField.tag==2){
+		NSLog(@"2");
+		[scrollview setContentOffset:CGPointMake(0,140) animated:YES];
+		[scrollview setUserInteractionEnabled:NO];
+	}
+	else{
+		[textField resignFirstResponder];
+	}
+	    return YES;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"textFieldDidBeginEditing");
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+	
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if(textField.tag==1){
+		[userName resignFirstResponder];
+		[password becomeFirstResponder];
+		[scrollview setContentOffset:CGPointMake(0,140) animated:YES];
+		[scrollview setUserInteractionEnabled:NO];
+	}
+	else{
+		[textField resignFirstResponder];
+		[scrollview setContentOffset:CGPointMake(0,0) animated:YES];
+		[scrollview setUserInteractionEnabled:YES];
+	}
+	
+	return YES;
+}
+-(void)signUp{
+	if(userName.text.length<=0 || password.text.length<=0 ){
+		[orc showAlert:@"Error" message:@"Harap isi data secara lengkap"];
+	}
+	else{
+		[blincBrain signIntoServer:userName.text password:password.text];
+	}
 }
 -(void)close:(id)sender{
 	[self.navigationController dismissViewControllerAnimated:YES completion:Nil];

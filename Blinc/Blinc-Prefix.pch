@@ -19,6 +19,7 @@
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 #import "orc.h"
+#import "blincAppDelegate.h"
 #import "blincCell.h"
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
