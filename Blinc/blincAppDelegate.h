@@ -16,4 +16,5 @@
 @property (strong, nonatomic) ICETutorialController *viewController;
 @property (strong, nonatomic) UIViewController *mainViewController;
 -(void)checkToken;
+-(void)logout;
 @end

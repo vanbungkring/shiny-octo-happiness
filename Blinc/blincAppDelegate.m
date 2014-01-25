@@ -43,15 +43,15 @@
 	
 	if([[[orc getCrredentials] objectForKey:@"token"] isEqualToString:@""]){
 		
-		//[self showIntro];
-		[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
-		[self loadpage];
-	}
-	
-	else{
 		[self showIntro];
 		//[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
 		//[self loadpage];
+	}
+	
+	else{
+		//[self showIntro];
+		[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
+		[self loadpage];
 	}
 	
 }
