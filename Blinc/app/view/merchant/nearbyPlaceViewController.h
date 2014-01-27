@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface nearbyPlaceViewController : UIViewController
-
+@interface nearbyPlaceViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	UITableView *merchant;
+	NSArray *array;
+}
 @end

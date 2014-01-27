@@ -17,5 +17,6 @@
 @property (strong, nonatomic) UIViewController *mainViewController;
 -(void)checkToken;
 -(void)logout;
--(void)signIntoServer:(NSString *)username password:(NSString *)password;
+-(void)signIntoServer:(NSDictionary *)params;
+-(void)signUptoServer:(NSDictionary *)params;
 @end

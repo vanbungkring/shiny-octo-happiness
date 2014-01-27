@@ -30,22 +30,19 @@
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-Light" size:18], NSFontAttributeName, nil]];
     // Override point for customization after application launch.
-	
 	[self checkToken];
 	
 	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
+	
 	[self.window makeKeyAndVisible];
     
 	return YES;
 }
 - (void)checkToken{
-	
-	if([[[orc getCrredentials] objectForKey:@"token"] isEqualToString:@""]){
-		
+	NSLog(@"data-->%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"token"]);
+	if([[NSUserDefaults standardUserDefaults] objectForKey:@"token"]==Nil){
+		[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
 		[self showIntro];
-		//[self.window.rootViewController dismissViewControllerAnimated:YES completion:Nil];
-		//[self loadpage];
 	}
 	
 	else{
@@ -56,7 +53,7 @@
 	
 }
 -(void)loadpage{
-
+	
 	
 	UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"nearbyPlaceViewController") alloc]init]];
 	[navigationController1.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
@@ -99,7 +96,7 @@
         index++;
     }
 }
-   
+
 -(void)showIntro{
 	// Init the pages texts, and pictures.
 	NSArray *tutorialLayers = nil;
@@ -212,6 +209,11 @@
 	self.window.rootViewController=self.viewController;
 	
 }
+-(void)logout{
+	[[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
+	[[NSUserDefaults standardUserDefaults]  synchronize];
+	[self checkToken];
+}
 -(void)call:(NSString*)status{
 	
 	UINavigationController *navO= [[UINavigationController alloc]initWithRootViewController:[[NSClassFromString(status) alloc]init]];
@@ -222,10 +224,28 @@
 	
 	
 }
--(void)signIntoServer:(NSString *)username password:(NSString *)password{
+-(void)signIntoServer:(NSDictionary *)params{
+	NSLog(@"params->%@",params);
+	[[netraNetwork sharedClient].requestSerializer setAuthorizationHeaderFieldWithUsername:[params objectForKey:@"username"] password:[params objectForKey:@"password"]];
+	[[netraNetwork sharedClient]POST:@"authorizations" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+		[[NSUserDefaults standardUserDefaults] setObject:[responseObject objectForKey:@"access_token"] forKey:@"token"];
+		[[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"username"] forKey:@"username"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+		[self checkToken];
+	} failure:^(NSURLSessionDataTask *task, NSError *error) {
+		NSLog(@"response error-->%@",error);
+	}];
 	
-	[[netraNetwork sharedClient].requestSerializer setAuthorizationHeaderFieldWithUsername:username password:password];
-	
+}
+-(void)signUptoServer:(NSDictionary *)params{
+	[netraNetwork sharedClient].requestSerializer = [AFJSONRequestSerializer serializer];
+	[[netraNetwork sharedClient].requestSerializer setValue:[NSString stringWithFormat:@"Token %@",first_token] forHTTPHeaderField:@"Authorization"];
+	[netraNetwork sharedClient].responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+	[[netraNetwork sharedClient]POST:@"signup" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+		[self signIntoServer:@{@"username":[responseObject objectForKey:@"email"],@"password":[params objectForKey:@"password"]}];
+	} failure:^(NSURLSessionDataTask *task, NSError *error) {
+		NSLog(@"error->%@",error);
+	}];
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -235,6 +255,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+	[[NSUserDefaults standardUserDefaults]synchronize];
 	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 	// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }

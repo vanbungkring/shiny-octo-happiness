@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
-
 @interface netraNetwork : AFHTTPSessionManager
 + (instancetype)sharedClient;
 @end

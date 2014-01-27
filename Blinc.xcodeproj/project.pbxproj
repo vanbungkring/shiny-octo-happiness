@@ -66,6 +66,7 @@
 		D0C0F59D1888CE5B00A67017 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F59C1888CE5B00A67017 /* CoreVideo.framework */; };
 		D0C0F59F1888CE6B00A67017 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F59E1888CE6B00A67017 /* libiconv.dylib */; };
 		D0C0F5A21888DB4600A67017 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C0F5A11888DB4600A67017 /* MapKit.framework */; };
+		D0D0F4DA189676380007344E /* cell-nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D0F4D9189676380007344E /* cell-nearby@2x.png */; };
 		D0EB80791889137D00120627 /* netraNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB80781889137D00120627 /* netraNetwork.m */; };
 		D0EB807C188913EE00120627 /* orc.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB807B188913EE00120627 /* orc.m */; };
 		D0EB807E188915CC00120627 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB807D188915CB00120627 /* MobileCoreServices.framework */; };
@@ -192,6 +193,7 @@
 		D0C0F59C1888CE5B00A67017 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D0C0F59E1888CE6B00A67017 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		D0C0F5A11888DB4600A67017 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0D0F4D9189676380007344E /* cell-nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell-nearby@2x.png"; sourceTree = "<group>"; };
 		D0EB80771889137D00120627 /* netraNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraNetwork.h; sourceTree = "<group>"; };
 		D0EB80781889137D00120627 /* netraNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraNetwork.m; sourceTree = "<group>"; };
 		D0EB807A188913EE00120627 /* orc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orc.h; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 		D0BECB8C1886BE4A00D4A00F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D0D0F4D9189676380007344E /* cell-nearby@2x.png */,
 				D0A2893B1891656A00F6463D /* see-rewards@2x.png */,
 				D0A289391891642100F6463D /* point-here@2x.png */,
 				D0A289371891451E00F6463D /* cell-selection@2x.png */,
@@ -793,6 +796,7 @@
 				D026A8F31890F51C0094ACBD /* scan_active@2x.png in Resources */,
 				D0EB80B61889500700120627 /* overlay@2x.png in Resources */,
 				D0699EE01876E6BD0029F6FD /* InfoPlist.strings in Resources */,
+				D0D0F4DA189676380007344E /* cell-nearby@2x.png in Resources */,
 				D0A2893A1891642100F6463D /* point-here@2x.png in Resources */,
 				D0B9CFAB1888B46600FC636D /* register-login-form@2x.png in Resources */,
 				D0BECBD51886CDF900D4A00F /* register@2x.png in Resources */,

@@ -19,9 +19,9 @@ static CGFloat kImageOriginHight = 240.f;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor = [UIColor whiteColor];
-		self.title = @"Starbuck";
 		_headerImage = [[UIImageView alloc]init];
-	
+		_headerImage.layer.masksToBounds = YES;
+		_headerImage.contentMode = UIViewContentModeScaleAspectFit;
 		
 		table_place = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-115)];
 		table_place.delegate = self;
@@ -29,10 +29,31 @@ static CGFloat kImageOriginHight = 240.f;
 		table_place.contentInset = UIEdgeInsetsMake(kImageOriginHight, 0, 0, 0);
 		table_place.separatorInset = UIEdgeInsetsZero;
 		table_place.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-		[_headerImage setImage:[UIImage imageNamed:@"tab"]];
-		[table_place addSubview:_headerImage];
-		_headerImage.frame = CGRectMake(0, -kImageOriginHight, table_place.frame.size.width, kImageOriginHight);
 		
+		avatar = [[UIImageView alloc]initWithFrame:CGRectMake((320-90)/2, -kImageOriginHight+80, 90, 90)];
+		avatar.layer.cornerRadius = 10;
+		avatar.layer.borderColor  = [UIColor lightGrayColor].CGColor;
+		avatar.layer.masksToBounds = YES;
+		
+		place_name = [[UILabel alloc]initWithFrame:CGRectMake(20, -kImageOriginHight+180, 280, 28)];
+		place_name.text = @"starbuck";
+		place_name.textColor  = [UIColor whiteColor];
+		place_name.textAlignment = NSTextAlignmentCenter;
+		place_name.textColor = [UIColor whiteColor];
+		place_name.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+		
+		
+		
+		_headerImage.frame = CGRectMake(0, -kImageOriginHight, table_place.frame.size.width, kImageOriginHight);
+		wrapper = [[UIView alloc]initWithFrame:_headerImage.frame];
+		wrapper.backgroundColor = [UIColor blackColor];
+		wrapper.alpha = .5;
+		
+		[table_place addSubview:_headerImage];
+		[table_place addSubview:wrapper];
+		[table_place addSubview:avatar];
+		[table_place addSubview:place_name];
+
 		about = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 280, 10)];
 		about.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13];
 		about.textColor = [UIColor colorWithRed:0.427 green:0.431 blue:0.443 alpha:1];
@@ -45,7 +66,7 @@ static CGFloat kImageOriginHight = 240.f;
 		phone = [[UILabel alloc]initWithFrame:CGRectMake(20, 100, 280, 10)];
 		phone.textColor = [UIColor colorWithRed:0.427 green:0.431 blue:0.443 alpha:1];
 		phone.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:13];
-
+		
 		store_name = [[UILabel alloc]initWithFrame:CGRectMake(20, 190, 280, 20)];
 		store_name.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:13];
 		store_name.textColor = [UIColor colorWithRed:0.427 green:0.431 blue:0.443 alpha:1];
@@ -55,9 +76,14 @@ static CGFloat kImageOriginHight = 240.f;
 		store_address.textColor = [UIColor colorWithRed:0.427 green:0.431 blue:0.443 alpha:1];
 		store_address.numberOfLines = 0;
 		
-		 mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 150)];
+		mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 150)];
 		
+		user_point =[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 320, 44)];
+		user_point.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:26];
+		user_point.textColor = [UIColor colorWithRed:0.89 green:0.714 blue:0 alpha:1];
+		user_point.textAlignment = NSTextAlignmentCenter;
 		[self.view addSubview:table_place];
+		
         // Custom initialization
     }
     return self;
@@ -69,6 +95,7 @@ static CGFloat kImageOriginHight = 240.f;
         f.origin.y = yOffset;
         f.size.height =  -yOffset;
         _headerImage.frame = f;
+		wrapper.frame = f;
     }
 }
 
@@ -107,10 +134,10 @@ static CGFloat kImageOriginHight = 240.f;
 	
 	website.text = @"www.starbuck.co.id";
 	phone.text = @"(+62) 21.777.88.99";
-	store_name.text = @"Starbuck Kemang";
+	
 	store_address.text = @"Jl. Kemang Raya Jakarta - \n12760 Jakarta Selatan";
 	[store_address sizeToFit];
-
+	
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
@@ -126,9 +153,11 @@ static CGFloat kImageOriginHight = 240.f;
 			[cell.contentView addSubview:store_address];
 			break;
 		case 3:
+			[cell.contentView addSubview:user_point];
 			cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"point-here"]];
 			break;
 		case 1:
+			
 			cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"see-rewards"]];
 			break;
 		default:
@@ -138,10 +167,20 @@ static CGFloat kImageOriginHight = 240.f;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+	
 	
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:YES];
+	NSLog(@"datapass->%@",self.data_pass);
+	user_point.text = self.data_pass.place_user_total_points;
+	store_name.text = self.data_pass.merchant_name;
+	
+	self.title = self.data_pass.merchant_name;
+	[_headerImage setImageWithURL:[NSURL URLWithString:self.data_pass.merchant_logo_url] placeholderImage:Nil];
+	[avatar setImageWithURL:[NSURL URLWithString:self.data_pass.merchant_logo_url] placeholderImage:Nil];
+	place_name.text = self.data_pass.merchant_name;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

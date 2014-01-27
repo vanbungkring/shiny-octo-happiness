@@ -11,8 +11,9 @@
 @interface orc : NSObject
 extern NSString *const serverUrl;
 extern NSString *const first_token;
+@property (nonatomic, strong) NSString *token;
 +(orc *) sharedInstance;
-+(void)setTokenCredentials:(NSString *)username email:(NSString *)email token:(NSString *)token;
-+(NSUserDefaults *)getCrredentials;
++(void) setToken:(NSString *)tokens;
++(NSString *)getToken;
 +(void)showAlert:(NSString *)title message:(NSString *)message;
 @end

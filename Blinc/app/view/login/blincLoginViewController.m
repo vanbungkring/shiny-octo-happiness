@@ -131,7 +131,12 @@
 		[orc showAlert:@"Error" message:@"Harap isi data secara lengkap"];
 	}
 	else{
-		[blincBrain signIntoServer:userName.text password:password.text];
+		static dispatch_once_t onceToken = 0;
+		dispatch_once(&onceToken, ^{
+			[blincBrain signIntoServer:@{@"username":userName.text,@"password":password.text}];
+			// Do any other initialisation stuff here
+		});
+		
 	}
 }
 -(void)close:(id)sender{

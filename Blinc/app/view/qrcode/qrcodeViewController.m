@@ -45,7 +45,8 @@
 			email.frame = CGRectMake(0, 248, 320, 30);
 			usercode.frame = CGRectMake(0, 268, 320, 30);
 		}
-		image.image = [UIImage mdQRCodeForString:@"lorem ipsum dolor sit amet" size:image.bounds.size.width fillColor:[UIColor blackColor]];
+		email.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"username"];
+		image.image = [UIImage mdQRCodeForString:[[NSUserDefaults standardUserDefaults]objectForKey:@"username"] size:image.bounds.size.width fillColor:[UIColor blackColor]];
 		[self.view addSubview:image];
 		[self.view addSubview:email];
 		[self.view addSubview:usercode];

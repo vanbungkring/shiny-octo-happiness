@@ -11,5 +11,6 @@
 @interface myPlaceViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	UITableView *tablePlace;
+	NSArray *array;
 }
 @end

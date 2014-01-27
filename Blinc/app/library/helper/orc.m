@@ -28,17 +28,13 @@ static orc *sharedObject;
 	
     return sharedObject;
 }
-+(void)setTokenCredentials:(NSString *)username email:(NSString *)email token:(NSString *)token{
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:username forKey:@"username"];
-    [defaults setObject:email forKey:@"email"];
-    [defaults setObject:token forKey:@"token"];
-    [defaults synchronize];
-    NSLog(@"Data saved");
-	
++(void) setToken:(NSString *)tokens{
+	orc *shared = [orc sharedInstance];
+    shared.token = tokens;
 }
-+(NSUserDefaults *)getCrredentials{
-	return [NSUserDefaults standardUserDefaults];
++(NSString *)getToken{
+	orc *shared = [orc sharedInstance];
+	return shared.token;
 }
 +(void)showAlert:(NSString *)title message:(NSString *)message{
 

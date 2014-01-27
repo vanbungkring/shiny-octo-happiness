@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface blincRegisterViewController : UIViewController<UIScrollViewDelegate>
+@interface blincRegisterViewController : UIViewController<UIScrollViewDelegate,UITextFieldDelegate>
 {
 	UIView *wrapper;
 	UIScrollView *scrollview;

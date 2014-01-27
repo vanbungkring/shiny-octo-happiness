@@ -7,9 +7,7 @@
 //
 
 #import "netraNetwork.h"
-
 @implementation netraNetwork
-
 + (instancetype)sharedClient {
     static netraNetwork *_sharedClient = nil;
     static dispatch_once_t onceToken;
@@ -17,12 +15,6 @@
 		NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
 		
 		[config setHTTPAdditionalHeaders:@{@"content-Type": @"application/json"}];
-		if(! [orc getCrredentials]){
-			[config setHTTPAdditionalHeaders:@{@"Authorization":first_token}];
-		}
-		else{
-			[config setHTTPAdditionalHeaders:@{@"Authorization":[[orc getCrredentials] objectForKey:@"token"]}];
-		}
 		NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:10 * 1024 * 1024
                                                           diskCapacity:50 * 1024 * 1024
                                                               diskPath:nil];
@@ -33,10 +25,10 @@
 										sessionConfiguration:config];
 		
 		_sharedClient.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
-		
 	
     });
     
     return _sharedClient;
 }
+
 @end
